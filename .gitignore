@@ -24,3 +24,7 @@ schema_documents.json
 # IDE files
 .idea/
 
+# Generated vector index
+*.index
+*.pkl
+
