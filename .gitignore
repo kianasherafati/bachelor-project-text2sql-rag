@@ -16,9 +16,11 @@ __pycache__/
 
 # Generated schema metadata
 schema.json
+schema_documents.json
 
 # Logs
 *.log
 
 # IDE files
 .idea/
+
