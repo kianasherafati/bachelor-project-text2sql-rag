@@ -80,10 +80,16 @@ def get_tables(cursor):
     cursor.execute("""
         SELECT
             s.name AS schema_name,
-            t.name AS table_name
+            t.name AS table_name,
+            CAST(ep.value AS nvarchar(max)) AS description
         FROM sys.tables AS t
         INNER JOIN sys.schemas AS s
             ON t.schema_id = s.schema_id
+        LEFT JOIN sys.extended_properties AS ep
+            ON ep.class = 1
+            AND ep.major_id = t.object_id
+            AND ep.minor_id = 0
+            AND ep.name = N'MS_Description'
         WHERE t.is_ms_shipped = 0
         ORDER BY
             s.name,
@@ -94,6 +100,7 @@ def get_tables(cursor):
         {
             "schema": row.schema_name,
             "name": row.table_name,
+            "description": row.description,
             "columns": [],
             "primary_key": [],
             "foreign_keys": []
@@ -121,7 +128,8 @@ def get_columns(cursor):
             c.precision,
             c.scale,
             c.is_nullable,
-            c.is_identity
+            c.is_identity,
+            CAST(ep.value AS nvarchar(max)) AS description
 
         FROM sys.tables AS t
 
@@ -133,6 +141,12 @@ def get_columns(cursor):
 
         INNER JOIN sys.types AS ty
             ON c.user_type_id = ty.user_type_id
+
+        LEFT JOIN sys.extended_properties AS ep
+            ON ep.class = 1
+            AND ep.major_id = t.object_id
+            AND ep.minor_id = c.column_id
+            AND ep.name = N'MS_Description'
 
         WHERE t.is_ms_shipped = 0
 
@@ -193,7 +207,8 @@ def get_foreign_keys(cursor):
 
             referenced_schema.name AS referenced_schema,
             referenced_table.name AS referenced_table,
-            referenced_column.name AS referenced_column
+            referenced_column.name AS referenced_column,
+            fkc.constraint_column_id
 
         FROM sys.foreign_keys AS fk
 
@@ -229,10 +244,39 @@ def get_foreign_keys(cursor):
         ORDER BY
             parent_schema.name,
             parent_table.name,
-            fk.name;
+            fk.name,
+            fkc.constraint_column_id;
     """)
 
-    return cursor.fetchall()
+    foreign_keys = {}
+
+    for row in cursor.fetchall():
+        key = (
+            row.parent_schema,
+            row.parent_table,
+            row.constraint_name,
+        )
+
+        if key not in foreign_keys:
+            foreign_keys[key] = {
+                "constraint_name": row.constraint_name,
+                "parent_schema": row.parent_schema,
+                "parent_table": row.parent_table,
+                "columns": [],
+                "references": {
+                    "schema": row.referenced_schema,
+                    "table": row.referenced_table,
+                    "columns": [],
+                },
+            }
+
+        foreign_key = foreign_keys[key]
+        foreign_key["columns"].append(row.parent_column)
+        foreign_key["references"]["columns"].append(
+            row.referenced_column
+        )
+
+    return list(foreign_keys.values())
 
 
 # ---------------------------------------------------------
@@ -277,7 +321,8 @@ def extract_schema():
             "precision": row.precision,
             "scale": row.scale,
             "nullable": bool(row.is_nullable),
-            "identity": bool(row.is_identity)
+            "identity": bool(row.is_identity),
+            "description": row.description,
         })
 
     # Add primary keys
@@ -292,20 +337,20 @@ def extract_schema():
         )
 
     # Add foreign keys
-    for row in foreign_keys:
+    for foreign_key in foreign_keys:
         key = (
-            row.parent_schema,
-            row.parent_table
+            foreign_key["parent_schema"],
+            foreign_key["parent_table"]
         )
 
         table_lookup[key]["foreign_keys"].append({
-            "constraint_name": row.constraint_name,
-            "column": row.parent_column,
+            "constraint_name": foreign_key["constraint_name"],
+            "columns": foreign_key["columns"],
 
             "references": {
-                "schema": row.referenced_schema,
-                "table": row.referenced_table,
-                "column": row.referenced_column
+                "schema": foreign_key["references"]["schema"],
+                "table": foreign_key["references"]["table"],
+                "columns": foreign_key["references"]["columns"],
             }
         })
 

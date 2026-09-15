@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 
@@ -9,8 +10,28 @@ OUTPUT_PATH = BASE_DIR / "schema_documents.json"
 
 
 def load_schema():
-    with INPUT_PATH.open("r", encoding="utf-8") as file:
+    with INPUT_PATH.open(
+        "r",
+        encoding="utf-8"
+    ) as file:
         return json.load(file)
+
+
+def humanize_identifier(name):
+    """
+    Convert CamelCase / PascalCase identifiers into
+    space-separated words.
+
+    Examples:
+    SalesInvoiceItem -> Sales Invoice Item
+    InventoryTransaction -> Inventory Transaction
+    UnitPrice -> Unit Price
+    """
+    return re.sub(
+        r"(?<!^)(?=[A-Z])",
+        " ",
+        name
+    )
 
 
 def format_data_type(column):
@@ -43,12 +64,31 @@ def format_data_type(column):
     return data_type.upper()
 
 
+def get_foreign_key_columns(foreign_key):
+    """Return ordered FK columns, including legacy scalar documents."""
+    source_columns = foreign_key.get("columns")
+
+    if source_columns is None:
+        source_columns = [foreign_key["column"]]
+
+    reference = foreign_key["references"]
+    target_columns = reference.get("columns")
+
+    if target_columns is None:
+        target_columns = [reference["column"]]
+
+    return source_columns, target_columns
+
+
 def build_incoming_relationships(schema_data):
     incoming = {}
 
     for table in schema_data["tables"]:
         for fk in table["foreign_keys"]:
             reference = fk["references"]
+            source_columns, target_columns = (
+                get_foreign_key_columns(fk)
+            )
 
             target_key = (
                 reference["schema"],
@@ -61,15 +101,18 @@ def build_incoming_relationships(schema_data):
             ).append({
                 "source_schema": table["schema"],
                 "source_table": table["name"],
-                "source_column": fk["column"],
-                "target_column": reference["column"],
+                "source_columns": source_columns,
+                "target_columns": target_columns,
                 "constraint_name": fk["constraint_name"],
             })
 
     return incoming
 
 
-def build_table_document(table, incoming_relationships):
+def build_table_document(
+    table,
+    incoming_relationships
+):
     schema_name = table["schema"]
     table_name = table["name"]
 
@@ -78,26 +121,64 @@ def build_table_document(table, incoming_relationships):
         table_name,
     )
 
-    primary_keys = set(
-        table["primary_key"]
-    )
+    primary_key_columns = table["primary_key"]
+    primary_keys = set(primary_key_columns)
 
-    foreign_key_lookup = {
-        fk["column"]: fk
-        for fk in table["foreign_keys"]
-    }
+    foreign_key_lookup = {}
+
+    for fk in table["foreign_keys"]:
+        source_columns, target_columns = (
+            get_foreign_key_columns(fk)
+        )
+
+        for source_column, target_column in zip(
+            source_columns,
+            target_columns
+        ):
+            foreign_key_lookup.setdefault(
+                source_column,
+                []
+            ).append((fk, target_column))
 
     lines = []
 
+    # Original table name
     lines.append(
         f"Table: {schema_name}.{table_name}"
     )
+
+    # Human-readable version for embeddings
+    lines.append(
+        f"Table words: "
+        f"{humanize_identifier(table_name)}"
+    )
+
+    table_description = table.get("description")
+
+    if table_description and table_description.strip():
+        lines.append(
+            f"Description: {table_description.strip()}"
+        )
+
+    if primary_key_columns:
+        lines.append(
+            "PRIMARY KEY ("
+            + ", ".join(primary_key_columns)
+            + ")"
+        )
 
     lines.append("")
     lines.append("Columns:")
 
     for column in table["columns"]:
         column_name = column["name"]
+
+        humanized_column = (
+            humanize_identifier(
+                column_name
+            )
+        )
+
         formatted_type = format_data_type(
             column
         )
@@ -105,28 +186,35 @@ def build_table_document(table, incoming_relationships):
         attributes = []
 
         if column_name in primary_keys:
-            attributes.append("PRIMARY KEY")
+            attributes.append(
+                "PRIMARY KEY"
+            )
 
         if column["identity"]:
-            attributes.append("IDENTITY")
+            attributes.append(
+                "IDENTITY"
+            )
 
         if column["nullable"]:
-            attributes.append("NULL")
+            attributes.append(
+                "NULL"
+            )
         else:
-            attributes.append("NOT NULL")
+            attributes.append(
+                "NOT NULL"
+            )
 
-        if column_name in foreign_key_lookup:
-            fk = foreign_key_lookup[
-                column_name
-            ]
-
+        for fk, target_column in foreign_key_lookup.get(
+            column_name,
+            []
+        ):
             reference = fk["references"]
 
             attributes.append(
                 "FOREIGN KEY REFERENCES "
                 f"{reference['schema']}."
                 f"{reference['table']}."
-                f"{reference['column']}"
+                f"{target_column}"
             )
 
         attribute_text = ", ".join(
@@ -135,9 +223,23 @@ def build_table_document(table, incoming_relationships):
 
         lines.append(
             f"- {column_name} "
-            f"{formatted_type}"
-            f" [{attribute_text}]"
+            f"({humanized_column}) "
+            f"{formatted_type} "
+            f"[{attribute_text}]"
         )
+
+        column_description = column.get(
+            "description"
+        )
+
+        if (
+            column_description
+            and column_description.strip()
+        ):
+            lines.append(
+                "  Description: "
+                f"{column_description.strip()}"
+            )
 
     lines.append("")
     lines.append("Relationships:")
@@ -147,13 +249,17 @@ def build_table_document(table, incoming_relationships):
     # Outgoing relationships
     for fk in table["foreign_keys"]:
         reference = fk["references"]
+        source_columns, target_columns = (
+            get_foreign_key_columns(fk)
+        )
 
         lines.append(
-            f"- {schema_name}.{table_name}."
-            f"{fk['column']} references "
+            f"- {fk['constraint_name']}: "
+            f"FOREIGN KEY ("
+            f"{', '.join(source_columns)}) REFERENCES "
             f"{reference['schema']}."
-            f"{reference['table']}."
-            f"{reference['column']}."
+            f"{reference['table']} ("
+            f"{', '.join(target_columns)})."
         )
 
         relationship_count += 1
@@ -164,12 +270,12 @@ def build_table_document(table, incoming_relationships):
         []
     ):
         lines.append(
-            f"- {relation['source_schema']}."
-            f"{relation['source_table']}."
-            f"{relation['source_column']} "
-            f"references "
-            f"{schema_name}.{table_name}."
-            f"{relation['target_column']}."
+            f"- {relation['constraint_name']}: "
+            f"{relation['source_schema']}."
+            f"{relation['source_table']} ("
+            f"{', '.join(relation['source_columns'])}) "
+            f"references {schema_name}.{table_name} ("
+            f"{', '.join(relation['target_columns'])})."
         )
 
         relationship_count += 1
@@ -182,7 +288,9 @@ def build_table_document(table, incoming_relationships):
     return "\n".join(lines)
 
 
-def build_schema_documents(schema_data):
+def build_schema_documents(
+    schema_data
+):
     incoming_relationships = (
         build_incoming_relationships(
             schema_data
@@ -210,7 +318,9 @@ def build_schema_documents(schema_data):
     return documents
 
 
-def save_documents(documents):
+def save_documents(
+    documents
+):
     with OUTPUT_PATH.open(
         "w",
         encoding="utf-8"
@@ -230,7 +340,9 @@ if __name__ == "__main__":
         schema_data
     )
 
-    save_documents(documents)
+    save_documents(
+        documents
+    )
 
     print(
         "Schema document generation successful."
@@ -246,7 +358,9 @@ if __name__ == "__main__":
         OUTPUT_PATH
     )
 
-    print("\nGenerated documents:\n")
+    print(
+        "\nGenerated documents:\n"
+    )
 
     for document in documents:
         print("=" * 70)

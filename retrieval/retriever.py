@@ -36,6 +36,13 @@ class SchemaRetriever:
         ) as file:
             self.documents = pickle.load(file)
 
+        if self.index.ntotal != len(self.documents):
+            raise ValueError(
+                "FAISS index size does not match metadata count: "
+                f"{self.index.ntotal} vectors, "
+                f"{len(self.documents)} documents."
+            )
+
         print(
             "Retriever ready. Documents:",
             len(self.documents)
@@ -46,6 +53,11 @@ class SchemaRetriever:
         question,
         top_k=3
     ):
+        top_k = min(top_k, self.index.ntotal)
+
+        if top_k <= 0:
+            return []
+
         question_embedding = (
             self.embedding_model.encode(
                 [question],
@@ -65,6 +77,9 @@ class SchemaRetriever:
             indices[0],
             scores[0]
         ):
+            if idx < 0:
+                continue
+
             document = self.documents[idx]
 
             results.append({
