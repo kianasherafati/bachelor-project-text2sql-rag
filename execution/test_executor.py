@@ -1,71 +1,74 @@
 from query_executor import execute_query
 
 
-tests = {
-    "VALID SELECT": """
-SELECT COUNT(*) AS ProductCount
-FROM dbo.Product;
-""",
-
-    "VALID EMPTY TABLE SELECT": """
-SELECT
-    ProductID,
-    ProductName
-FROM dbo.Product;
-""",
-
-    "INVALID UPDATE": """
-UPDATE dbo.Product
-SET ProductName = 'Test';
-""",
-
-    "HALLUCINATED COLUMN": """
-SELECT
-    Email
-FROM dbo.Product;
+rag_generated_sql = """
+```sql
+SELECT 
+    p.ProductID,
+    p.ProductName,
+    SUM(si.Quantity) AS TotalSalesQuantity
+FROM 
+    dbo.Product p
+JOIN 
+    dbo.SalesInvoiceItem si
+    ON p.ProductID = si.ProductID
+GROUP BY 
+    p.ProductID,
+    p.ProductName
+ORDER BY 
+    TotalSalesQuantity DESC;
+```
 """
-}
 
 
-for test_name, sql in tests.items():
-    print("=" * 70)
-    print(test_name)
+print("=" * 70)
+print("REAL RAG-GENERATED QUERY")
 
-    result = execute_query(sql)
+result = execute_query(
+    rag_generated_sql
+)
 
-    print(
-        "Status:",
-        result["status"]
-    )
+print(
+    "Status:",
+    result["status"]
+)
 
-    print(
-        "Executed:",
-        result["executed"]
-    )
+print(
+    "Executed:",
+    result["executed"]
+)
 
-    print(
-        "Columns:",
-        result["columns"]
-    )
+print(
+    "Columns:",
+    result["columns"]
+)
 
-    print(
-        "Rows:",
-        result["rows"]
-    )
+print(
+    "Rows:"
+)
 
-    print(
-        "Row count:",
-        result["row_count"]
-    )
+for row in result["rows"]:
+    print(row)
 
-    print(
-        "Validation errors:",
-        result["validation_errors"]
-    )
+print(
+    "Row count:",
+    result["row_count"]
+)
 
-    print(
-        "Execution error:",
-        result["execution_error"]
-    )
+print(
+    "Validation errors:",
+    result["validation_errors"]
+)
 
-    print()
+print(
+    "Execution error:",
+    result["execution_error"]
+)
+
+print(
+    "\nCleaned SQL:"
+)
+
+print(
+    result["sql"]
+)
