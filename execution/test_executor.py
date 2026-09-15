@@ -72,3 +72,8 @@ print(
 print(
     result["sql"]
 )
+
+print(
+    "Execution time:",
+    result["execution_time"]
+)

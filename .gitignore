@@ -28,3 +28,5 @@ schema_documents.json
 *.index
 *.pkl
 
+# Runtime logs
+runtime_logs/

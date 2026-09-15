@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 from pathlib import Path
 
 import pyodbc
@@ -8,6 +9,7 @@ from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
+
 
 # Allow importing the validator folder
 sys.path.insert(
@@ -30,6 +32,7 @@ load_dotenv(ENV_PATH)
 def build_connection_string():
     server = os.getenv("DB_SERVER")
     database = os.getenv("DB_DATABASE")
+
     driver = os.getenv(
         "DB_DRIVER",
         "ODBC Driver 17 for SQL Server"
@@ -113,6 +116,7 @@ def execute_query(
             "validation_errors":
                 validation_result["errors"],
             "execution_error": None,
+            "execution_time": None,
         }
 
     cleaned_sql = validation_result[
@@ -132,10 +136,15 @@ def execute_query(
             connection_string,
             timeout=5
         ) as connection:
-            
-             # Query execution timeout in seconds
+
+            # Query execution timeout
             connection.timeout = 10
+
             cursor = connection.cursor()
+
+            execution_start = (
+                time.perf_counter()
+            )
 
             cursor.execute(
                 cleaned_sql
@@ -144,6 +153,11 @@ def execute_query(
             # A valid SELECT should return
             # a result set.
             if cursor.description is None:
+                execution_time = (
+                    time.perf_counter()
+                    - execution_start
+                )
+
                 return {
                     "status":
                         "execution_error",
@@ -155,6 +169,8 @@ def execute_query(
                     "validation_errors": [],
                     "execution_error":
                         "Query returned no result set.",
+                    "execution_time":
+                        execution_time,
                 }
 
             columns = [
@@ -167,6 +183,11 @@ def execute_query(
                 cursor.fetchmany(
                     max_rows
                 )
+            )
+
+            execution_time = (
+                time.perf_counter()
+                - execution_start
             )
 
             rows = [
@@ -184,6 +205,8 @@ def execute_query(
                 "sql": cleaned_sql,
                 "validation_errors": [],
                 "execution_error": None,
+                "execution_time":
+                    execution_time,
             }
 
     except pyodbc.Error as exc:
@@ -196,4 +219,5 @@ def execute_query(
             "sql": cleaned_sql,
             "validation_errors": [],
             "execution_error": str(exc),
+            "execution_time": None,
         }
