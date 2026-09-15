@@ -8,6 +8,8 @@ BASE_DIR = Path(__file__).resolve().parent
 INPUT_PATH = BASE_DIR / "schema.json"
 OUTPUT_PATH = BASE_DIR / "schema_documents.json"
 
+ALLOWED_SCHEMA_PREFIXES = ["gnd_"]
+
 
 def load_schema():
     with INPUT_PATH.open(
@@ -15,6 +17,46 @@ def load_schema():
         encoding="utf-8"
     ) as file:
         return json.load(file)
+
+
+def filter_tables_for_retrieval(
+    schema_data,
+    allowed_schema_prefixes=None
+):
+    if allowed_schema_prefixes is None:
+        allowed_schema_prefixes = ALLOWED_SCHEMA_PREFIXES
+
+    normalized_prefixes = tuple(
+        prefix.casefold()
+        for prefix in allowed_schema_prefixes
+    )
+
+    return [
+        table
+        for table in schema_data["tables"]
+        if table["schema"].casefold().startswith(
+            normalized_prefixes
+        )
+    ]
+
+
+def get_filter_statistics(
+    schema_data,
+    included_tables
+):
+    included_schemas = sorted({
+        table["schema"]
+        for table in included_tables
+    })
+
+    return {
+        "included_tables": len(included_tables),
+        "excluded_tables": (
+            len(schema_data["tables"])
+            - len(included_tables)
+        ),
+        "included_schemas": included_schemas,
+    }
 
 
 def humanize_identifier(name):
@@ -289,17 +331,27 @@ def build_table_document(
 
 
 def build_schema_documents(
-    schema_data
+    schema_data,
+    allowed_schema_prefixes=None
 ):
+    included_tables = filter_tables_for_retrieval(
+        schema_data,
+        allowed_schema_prefixes
+    )
+
+    retrieval_schema_data = {
+        "tables": included_tables
+    }
+
     incoming_relationships = (
         build_incoming_relationships(
-            schema_data
+            retrieval_schema_data
         )
     )
 
     documents = []
 
-    for table in schema_data["tables"]:
+    for table in included_tables:
         text = build_table_document(
             table,
             incoming_relationships
@@ -340,6 +392,14 @@ if __name__ == "__main__":
         schema_data
     )
 
+    included_tables = filter_tables_for_retrieval(
+        schema_data
+    )
+    statistics = get_filter_statistics(
+        schema_data,
+        included_tables
+    )
+
     save_documents(
         documents
     )
@@ -354,14 +414,28 @@ if __name__ == "__main__":
     )
 
     print(
+        "Included tables:",
+        statistics["included_tables"]
+    )
+    print(
+        "Excluded tables:",
+        statistics["excluded_tables"]
+    )
+    print(
+        "Included schemas:",
+        ", ".join(statistics["included_schemas"])
+        or "(none)"
+    )
+
+    print(
         "Output:",
         OUTPUT_PATH
     )
 
-    print(
-        "\nGenerated documents:\n"
-    )
+ #   print(
+ #       "\nGenerated documents:\n"
+ #   )
 
-    for document in documents:
-        print("=" * 70)
-        print(document["text"])
+ #   for document in documents:
+ #       print("=" * 70)
+ #       print(document["text"])
