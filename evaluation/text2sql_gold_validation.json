@@ -1,0 +1,5384 @@
+{
+  "started_at_utc": "2026-09-15T15:14:28.643313+00:00",
+  "tables": {
+    "gnd_amast.tblEquipment": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "MotherID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EquipmentSequence",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EquipmentKindID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Model",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RunMeterUnitTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TechnicalDescription",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": -1,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TechnicalNumber",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SerialNumber",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Hirarchy",
+          "type": "hierarchyid",
+          "nullable": true,
+          "max_length": 892,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PictureName",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ManufacturerCountryID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CharacteristicFeature",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BrandID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "OperationYear",
+          "type": "date",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "OperationLocationID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ProjectID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "YearOfManufacture",
+          "type": "date",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "StatusColor",
+          "type": "char",
+          "nullable": true,
+          "max_length": 9,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "StatusID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SubDivisionLevelID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RelatedEquipmentUnitID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PNGoodID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "OwnerID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BeneficiaryID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MotorPlate",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EquipmentSpecificationID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "NameInFarsi",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "NameInEnglish",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "OperationalProcessID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EquipmentProductionStartTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EquipmentShortName",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "McNameSenses",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ProductidSenses",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_amast.tblEquipmentFailure": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "EquipmentID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "FailureDate",
+          "type": "datetime",
+          "nullable": false,
+          "max_length": 8,
+          "precision": 23,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "FailureTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Comment",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 2000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_amast.tblFailureType": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 1000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Notes",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 2000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ManualCode",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_amast.tblStopType": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 200,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "StopGroupTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_crsls.tblCustomer": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "CustomerCode",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CustomerGroupID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ParentCustomerID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MaxCashCredit",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MaxNonCashCredit",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MonthlyIncomeEstimate",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EstimatedAreaPerUnit",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "OwnershipTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SituationID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CustomerTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AgreedLedgerReceiveDays",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AgreedChequesDuration",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsNotEnable",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TransportationCompanyID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IntroductionID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SalesIntermediaryID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_crsls.tblCustomerAddress": {
+      "columns": [
+        {
+          "name": "CustomerID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "StateID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CityID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Address",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 2000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "POBox",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Phone",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 24,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "WeavingPlaceName",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 200,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_crsls.tblLoading": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "DoneDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CarrierPersonID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SalesOrderID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CredbInventoryID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CredbDepartmentID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Code",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BarCode",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalGrossWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalNetWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 2000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TransportationCompanyDriverIG",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ShippingCost",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "InsuranceCost",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SecurityDetailIG",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CarLoadedWeight",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CarUnLoadedWeight",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CargoNetWeight",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AnnualSalesOrderNumber",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AdditionalMessage",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 2000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CargoTotalNetWeight",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "LoadPostingID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_crsls.tblLoadingDetail": {
+      "columns": [
+        {
+          "name": "LoadingID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Sequence",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "GoodID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Qty",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "InvValue",
+          "type": "money",
+          "nullable": false,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "TotalGrossWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalNetWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PackCount",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_crsls.tblLoadingSerialDetail": {
+      "columns": [
+        {
+          "name": "LoadingDetailIG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Serial",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_fiaci.tblAccount": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "AccountCode",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 40,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Title",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 1000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Farsi",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 1000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "English",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 1000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AccountTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RemainedTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AccountStatusID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MotherID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AccountCostingTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BudgetManageTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Hirarchy",
+          "type": "hierarchyid",
+          "nullable": true,
+          "max_length": 892,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_fiaci.tblTrans": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "TransCode",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Code",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DocDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "FormTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "FormID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TransTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PeriodSpecID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CompanyID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalDebit",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalCredit",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 2000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "GSerial",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_fiaci.tblTransDetail": {
+      "columns": [
+        {
+          "name": "TransID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RowNumber",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AccountID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": -1,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Debit",
+          "type": "money",
+          "nullable": false,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Credit",
+          "type": "money",
+          "nullable": false,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SourceFormSequence",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "ReferenceFormTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ReferenceFormID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RelatedForms",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": -1,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ExecuteDate",
+          "type": "date",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ACCReference",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 200,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_hrprs.tblDocumentType": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Farsi",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 1000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "English",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 1000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_hrprs.tblEmployeeRequiredDocument": {
+      "columns": [
+        {
+          "name": "EmployeeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Sequence",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DocumentTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "HasAttachment",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PictureName",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_hrprs.tblJobGroup": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_hrprs.tblJobTitle": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "JobTitle",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "LegalPositionID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "JobGroupID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "InsuranceJobCodeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_hrprs.tblLegalPosition": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Name",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EmtiazSharayetKar",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EmtiazSarparasti",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MotherID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "InsuranceJobCodeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EmtiazRisk",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DisplaySequence",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TrialPeriod",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Hirarchy",
+          "type": "hierarchyid",
+          "nullable": true,
+          "max_length": 892,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_hrpyr.tblSalaryTaxList": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "CompanyID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TaxBranchID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "YearMonthID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PaymentDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PayableValue",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_hrpyr.tblTaxTable": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "TaxBranchID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "FromDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ToDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_hrpyr.tblTaxTableDetail": {
+      "columns": [
+        {
+          "name": "TaxTableID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Row",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MinSalaryValue",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MaxSalaryValue",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TaxValue",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TaxPercent",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 9,
+          "precision": 18,
+          "scale": 1,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_pjprj.tblDailyReport": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "ProjectID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 900,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SpentTimeDur",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Date",
+          "type": "smalldatetime",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 16,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ReporterID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TaskTitle",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_pjprj.tblModelStep": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "ModelID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ModelStepGroupID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "StepID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DefaultDuration",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DefaultDurationSum",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DefultPartnerID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SampleDuration",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsRelativeToVolume",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "LevelNo",
+          "type": "smallint",
+          "nullable": true,
+          "max_length": 2,
+          "precision": 5,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SampleDurationSum",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SampleNotNeeded",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SampleEndDate",
+          "type": "date",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MotherID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EquipmentKindID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_pjprj.tblProject": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "DepartmentID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Hirarchy",
+          "type": "hierarchyid",
+          "nullable": true,
+          "max_length": 892,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ModelID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MotherID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Farsi",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "English",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ProjectTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RayvarzCode",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ProjectVolume",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BeginDate",
+          "type": "date",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EndDate",
+          "type": "date",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_pjprj.tblProjectStep": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Sequence",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ModelStepID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": -1,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "StartDate",
+          "type": "date",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EndDate",
+          "type": "date",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Duration",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DurationSum",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PartnerID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ProjectID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsDone",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "NotNeeded",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_pjprj.tblStep": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Farsi",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "English",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scinv.tblCounter": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Code",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 2000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DoneDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "WarehousingID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "LimitToLocationID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SumItems",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SumQty",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BarCode",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 60,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scinv.tblCounterDetail": {
+      "columns": [
+        {
+          "name": "CounterID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Sequence",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BarCode",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 60,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "GoodID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Qty",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "LastUpdateTime",
+          "type": "datetime",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 23,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Color",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "TotalGrossWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalNetWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PackCount",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_scinv.tblLocation": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "InventoryID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Label",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Volume",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 9,
+          "precision": 16,
+          "scale": 3,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scpch.tblPurchasableService": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Name",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "LastPrice",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ServiceUnitTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AccountID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PaymentDelayInMonth",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scpch.tblRequestBuyService": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Code",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ManualCode",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DoneDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RequesterEmployeeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "UnitID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DepartmentID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalValue",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Notes",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 4000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ProjectID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PermissionNumber",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TaxValue",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DiscountValue",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ConfirmShow",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 4000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "FormID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "FormTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SupplierID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scpch.tblRequestBuyServiceDetail": {
+      "columns": [
+        {
+          "name": "RequestBuyServiceID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Sequence",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 1000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Qty",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ProposalFee",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BuyFee",
+          "type": "money",
+          "nullable": false,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ServiceTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "UsePlaceID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "TotalValue",
+          "type": "money",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 19,
+          "scale": 4,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PurchasableServiceID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "GeneralAssetID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_scpch.tblSupplierEvaluation": {
+      "columns": [
+        {
+          "name": "SupplierID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DoneDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "SupplierEvaluationTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SupplierEvaluationParameterID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Score",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 2,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_scpch.tblSupplierEvaluationParameter": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Descriptions",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Score",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 2,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsMandatory",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scprd.tblDefectionType": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "Farsi",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "English",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scprd.tblProductionReportManufacturingStopDetail": {
+      "columns": [
+        {
+          "name": "ProductionReportManufacturingID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "StopCode",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "StopTypeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "StartTime",
+          "type": "time",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 8,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EndTime",
+          "type": "time",
+          "nullable": true,
+          "max_length": 3,
+          "precision": 8,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_scprd.tblYarnDefect": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "SupervisorEmployeeID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "OperationLocationID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "OperationalProcessID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EquipmentID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DailyYarnDefectID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Sequence",
+          "type": "smallint",
+          "nullable": true,
+          "max_length": 2,
+          "precision": 5,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scprd.tblYarnDefectSpindleDefectionDetail": {
+      "columns": [
+        {
+          "name": "YarnDefectSpindleIG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Sequence",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DefectionTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "DefectionResponsibleUnitID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsPrimaryDefection",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "SpindleCount",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SpindleWeight",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SpindleTotalWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "YarnDefectSpindleDefectionID",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_scprd.tblYarnDefectSpindleDetail": {
+      "columns": [
+        {
+          "name": "YarnDefectID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Sequence",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "HeadNumber",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "InterweavingID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsHalfMade",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SpindleWeight",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "IsDefectionCausedBecomelowerDegree",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SpindleCount",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalDefectedSpindleWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 13,
+          "precision": 26,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalAcceptableSpindleWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 17,
+          "precision": 37,
+          "scale": 6,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsDefectionCauseReturn",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_scqam.tblAuditInspection": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "OperationLocationID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AuditSectionID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ShiftName",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AuditDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AuditDateTime",
+          "type": "datetime",
+          "nullable": false,
+          "max_length": 8,
+          "precision": 23,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SysUserName",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 200,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "TotalScore",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 9,
+          "precision": 10,
+          "scale": 2,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MaxScore",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 9,
+          "precision": 10,
+          "scale": 2,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PercentScore",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 9,
+          "precision": 10,
+          "scale": 2,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 2000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsFinal",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsDeleted",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CreateDate",
+          "type": "datetime",
+          "nullable": false,
+          "max_length": 8,
+          "precision": 23,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ModifyDate",
+          "type": "datetime",
+          "nullable": true,
+          "max_length": 8,
+          "precision": 23,
+          "scale": 3,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scqam.tblAuditInspectionDetail": {
+      "columns": [
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "AuditInspectionID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AuditQuestionID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Score",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 9,
+          "precision": 10,
+          "scale": 2,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Description",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 2000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CreateDate",
+          "type": "datetime",
+          "nullable": false,
+          "max_length": 8,
+          "precision": 23,
+          "scale": 3,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    },
+    "gnd_scqam.tblAuditQuestion": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "QuestionTitle",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 1000,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MaxScore",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 9,
+          "precision": 10,
+          "scale": 2,
+          "pk_ordinal": null
+        },
+        {
+          "name": "SortOrder",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IsActive",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CreateDate",
+          "type": "datetime",
+          "nullable": false,
+          "max_length": 8,
+          "precision": 23,
+          "scale": 3,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scqam.tblCartonInspectionTest": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "OperationalLocationID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Date",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ShiftID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "PackingDate",
+          "type": "date",
+          "nullable": false,
+          "max_length": 3,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "InterweavingID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "YarnGradeTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "YarnTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "NoOfCones",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "WeightOnLable",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 5,
+          "precision": 6,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ActualWeight",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 5,
+          "precision": 6,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Diffrence",
+          "type": "decimal",
+          "nullable": false,
+          "max_length": 5,
+          "precision": 6,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "NetWeight",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CartonLable",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CartonLablePasting",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ConeNylonCondition",
+          "type": "bit",
+          "nullable": false,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BobbinColorTypeID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "CartonCondition",
+          "type": "nvarchar",
+          "nullable": false,
+          "max_length": 400,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AverageWight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MaximumWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MinimumWight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RangePlusWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RangeMinesWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AverageHumidity",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MaximumHumidity",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MinimumHumidity",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RangePlusHumidity",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "RangeMinesHumidity",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AverageSmallDiameter",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MaximumSmallDiameter",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MinimumSmallDiameter",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "AverageBigDiameter",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MaximumBigDiameter",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "MinimumBigDiameter",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 7,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "EmptyConeWeight",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 9,
+          "precision": 16,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "NetDiferrence",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 9,
+          "precision": 16,
+          "scale": 3,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "ID"
+      ]
+    },
+    "gnd_scqam.tblCartonInspectionTestDetail": {
+      "columns": [
+        {
+          "name": "CartonInspectionTestID",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "IG",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": 1
+        },
+        {
+          "name": "BobbinNo",
+          "type": "int",
+          "nullable": false,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Weight",
+          "type": "int",
+          "nullable": true,
+          "max_length": 4,
+          "precision": 10,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Label",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "VisualInspectionUv",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Humidity",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 5,
+          "scale": 2,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ConeHardness",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "ReserveYarnLengthPosition",
+          "type": "bit",
+          "nullable": true,
+          "max_length": 1,
+          "precision": 1,
+          "scale": 0,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Smalldiameter",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 6,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "BigDiameter",
+          "type": "decimal",
+          "nullable": true,
+          "max_length": 5,
+          "precision": 6,
+          "scale": 3,
+          "pk_ordinal": null
+        },
+        {
+          "name": "Checker",
+          "type": "nvarchar",
+          "nullable": true,
+          "max_length": 100,
+          "precision": 0,
+          "scale": 0,
+          "pk_ordinal": null
+        }
+      ],
+      "primary_key": [
+        "IG"
+      ]
+    }
+  },
+  "foreign_keys": {
+    "gnd_amast.tblEquipmentFailure.EquipmentID -> gnd_amast.tblEquipment.ID": [
+      {
+        "constraint": "FK_tblFailureTypeL_tblEquipment",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_amast.tblEquipmentFailure.FailureTypeID -> gnd_amast.tblFailureType.ID": [
+      {
+        "constraint": "FK_tblEquipmentFailure_tblFailureType",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_crsls.tblCustomerAddress.CustomerID -> gnd_crsls.tblCustomer.ID": [
+      {
+        "constraint": "FK_tblCustomerAddress_tblCustomer",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_crsls.tblLoadingDetail.LoadingID -> gnd_crsls.tblLoading.ID": [
+      {
+        "constraint": "FK_tblLoadingDetail_tblLoading",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_crsls.tblLoadingSerialDetail.LoadingDetailIG -> gnd_crsls.tblLoadingDetail.IG": [
+      {
+        "constraint": "FK_tblLoadingSerialDetail_tblLoadingDetail",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_fiaci.tblTransDetail.AccountID -> gnd_fiaci.tblAccount.ID": [
+      {
+        "constraint": "FK_tblTransDetail_tblAccount",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_fiaci.tblTransDetail.TransID -> gnd_fiaci.tblTrans.ID": [
+      {
+        "constraint": "FK_tblTransDetail_tblTrans",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_hrprs.tblEmployeeRequiredDocument.DocumentTypeID -> gnd_hrprs.tblDocumentType.ID": [
+      {
+        "constraint": "FK_tblEmployeeRequiredDocument_tblDocumentType",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_hrprs.tblJobTitle.JobGroupID -> gnd_hrprs.tblJobGroup.ID": [
+      {
+        "constraint": "FK_tblJobTitle_tblJobGroup",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_hrprs.tblJobTitle.LegalPositionID -> gnd_hrprs.tblLegalPosition.ID": [
+      {
+        "constraint": "FK_tblJobTitle_tblLegalPosition",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_hrpyr.tblTaxTableDetail.TaxTableID -> gnd_hrpyr.tblTaxTable.ID": [
+      {
+        "constraint": "FK_tblTaxTableDetail_tblTaxTable",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_pjprj.tblModelStep.StepID -> gnd_pjprj.tblStep.ID": [
+      {
+        "constraint": "FK_tblModelStep_tblStep",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_pjprj.tblProjectStep.ModelStepID -> gnd_pjprj.tblModelStep.ID": [
+      {
+        "constraint": "FK_tblProjectMainStep_tblMainStep",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_pjprj.tblProjectStep.ProjectID -> gnd_pjprj.tblProject.ID": [
+      {
+        "constraint": "FK_tblProjectStep_tblProject",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scinv.tblCounterDetail.CounterID -> gnd_scinv.tblCounter.ID": [
+      {
+        "constraint": "FK_gnd_scinv_tblCounterDetail_gnd_scinv_tblCounter",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scpch.tblRequestBuyServiceDetail.PurchasableServiceID -> gnd_scpch.tblPurchasableService.ID": [
+      {
+        "constraint": "FK_tblRequestBuyServiceDetail_tblPurchasableService",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scpch.tblRequestBuyServiceDetail.RequestBuyServiceID -> gnd_scpch.tblRequestBuyService.ID": [
+      {
+        "constraint": "FK_tblRequestBuyServiceDetail_tblRequestBuyService",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scpch.tblSupplierEvaluation.SupplierEvaluationParameterID -> gnd_scpch.tblSupplierEvaluationParameter.ID": [
+      {
+        "constraint": "FK_tblSupplierEvaluation_tblSupplierEvaluationParameter",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scprd.tblProductionReportManufacturingStopDetail.StopTypeID -> gnd_amast.tblStopType.ID": [
+      {
+        "constraint": "FK_tblProductionReportManufacturingStopDetail_tblStopType",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scprd.tblYarnDefectSpindleDefectionDetail.DefectionTypeID -> gnd_scprd.tblDefectionType.ID": [
+      {
+        "constraint": "FK_tblYarnDefectSpindleDefectionDetail_tblDefectionType",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scprd.tblYarnDefectSpindleDefectionDetail.YarnDefectSpindleIG -> gnd_scprd.tblYarnDefectSpindleDetail.IG": [
+      {
+        "constraint": "FK_tblYarnDefectSpindleDefectionDetail_tblYarnDefectSpindleDetail",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scprd.tblYarnDefectSpindleDetail.YarnDefectID -> gnd_scprd.tblYarnDefect.ID": [
+      {
+        "constraint": "FK_tblYarnDefectSpindleDetail_tblYarnDefect",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scqam.tblAuditInspectionDetail.AuditInspectionID -> gnd_scqam.tblAuditInspection.ID": [
+      {
+        "constraint": "FK_tblAuditInspectionDetail_tblAuditInspection",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scqam.tblAuditInspectionDetail.AuditQuestionID -> gnd_scqam.tblAuditQuestion.ID": [
+      {
+        "constraint": "FK_tblAuditInspectionDetail_tblAuditQuestion",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ],
+    "gnd_scqam.tblCartonInspectionTestDetail.CartonInspectionTestID -> gnd_scqam.tblCartonInspectionTest.ID": [
+      {
+        "constraint": "FK_gnd_scpch.tblCartonInspectionDetailTest_gnd_scpch.tblCartonInspectionTest",
+        "disabled": false,
+        "not_trusted": false,
+        "column_count": 1
+      }
+    ]
+  },
+  "schema_differences": [],
+  "protected_file_sha256": {
+    "retrieval\\build_index.py": "99fa948c711a3362bc7b27992071ac448e0e9f3aaa38709caf1e65240568cd1f",
+    "retrieval\\erp_retrieval_benchmark.py": "c250593815d53ff73136f5d1eda7c86f12193db268baa3e8c0bbaa1d56daee09",
+    "retrieval\\erp_retrieval_heldout_benchmark.py": "9923e8b37ef62daa1f2e3cb3cbbc46026a7e24c64556e77441e7e5f81fdc7208",
+    "retrieval\\graph_expanded_retriever.py": "296f0c1ab7c3e7b4059f6b52b53fa1d814366427f2db987fc62d40b65d026304",
+    "retrieval\\hybrid_retriever.py": "0f9ad0dae0be92e8f60b0c44d336c92bb117375dd0d81d026a46e2817d10bc54",
+    "retrieval\\retriever.py": "51c66cbce7c55ff6e9bb7385d5120e2025280fafc4d89c7a9a8cd3471d54bc26",
+    "retrieval\\run_erp_retrieval_benchmark.py": "8e7b556863db36c4360d6df0283e1f22f7813e9acf98f7d4b938e41c39b6f07f",
+    "retrieval\\run_graph_expanded_erp_retrieval_benchmark.py": "5698086ff5f92d1a1bc6dab13fd9e994724f75404b7a33f89134deb9e1233491",
+    "retrieval\\run_heldout_retrieval_comparison.py": "2b14f2edb44dcacc1549ec28dd082ffe88e399a413ef1e48dd553e3f6884ae6c",
+    "retrieval\\run_hybrid_erp_retrieval_benchmark.py": "6ede471f4cc8d25d5775a5d29b5eedd73225e71466aea624832ffb3db50a0a62",
+    "retrieval\\schema.index": "2b6b259d1cc07780fe7ae374bf5ce099525a6f4bca2dc66f8127fda20f5e3e99",
+    "retrieval\\schema_metadata.pkl": "71c2a110dd502505738f5672ccea5cb6066e0673b1689aa1ccd869463eff7786",
+    "retrieval\\test_graph_expanded_retriever.py": "7bdc6215a21425bd26d722cb41c23e5d05d597875116aeb84221ccb7d46c1de2",
+    "retrieval\\test_hybrid_retriever.py": "a46162efe17e6849c689a1838fa59e02874365045082e71e7623112dfd91ca4f",
+    "retrieval\\test_retriever.py": "801aeb00dd87d22a7bf612d4f7cd869bb6799d46a8f0415070ce311ac5e462b5",
+    "schema_extraction\\build_schema_documents.py": "2e7930a71ab05896d3b6f339f4992d784e3bd7806c4d92fa7bbd9faf07a3c286",
+    "schema_extraction\\check_connection.py": "195cc6c97a6337feab4f45d04a9ae773da96938486e449123a827340a1afcfbe",
+    "schema_extraction\\extract_schema.py": "84b142ecb6bbc81d9b08fb9936c5e1e7a681910a4caee3b5382deb78a84b5aee",
+    "schema_extraction\\schema.json": "913c7896a7caed8c630b710b746d1284f3803d68740f9798fa0352d449eb6166",
+    "schema_extraction\\schema_documents.json": "af1aca0f0b97c8bbd346e26b16f87d625efd562487aaefe6d9a75815f2a29477",
+    "schema_extraction\\schema_stats.py": "14ed689e8578fe9718e2f409c8e2198c9a1c11dab831a59fb4d5ad61a9dac7f8"
+  },
+  "validation_method": "Reuse the original complete-result observations for 19 cases. Revalidate only H09 with an unchanged SELECT, fetch at most 10 rows, then cancel. No result rows retained.",
+  "summary": {
+    "question_count": 20,
+    "executable_count": 20,
+    "nonempty_count": 16,
+    "empty_count": 4,
+    "permission_limited_ids": [],
+    "review_ids": [
+      "ERP-H01",
+      "ERP-H02",
+      "ERP-H03",
+      "ERP-H05",
+      "ERP-H07",
+      "ERP-H08",
+      "ERP-H17",
+      "ERP-H18"
+    ],
+    "protected_artifacts_unchanged": true,
+    "benchmark_sha256": "9923e8b37ef62daa1f2e3cb3cbbc46026a7e24c64556e77441e7e5f81fdc7208",
+    "completed_at_utc": "2026-09-15T15:15:54.327150+00:00",
+    "last_updated_at_utc": "2026-09-18T16:11:02.129550+00:00",
+    "row_samples_saved": false,
+    "completed_results_reused": true,
+    "current_validation_policy": "Fetch at most 10 rows, cancel the result, and record a lower bound when not fully counted. Prior exact counts are preserved without re-execution.",
+    "comparison_policy": "Unordered multiset: preserve duplicates and NULLs; compare column values, not alias spellings. Empty results need separate treatment.",
+    "snapshot_limitation": "Live read-only execution, not a database snapshot. Counts describe the validation run and may change later."
+  },
+  "case_validation": [
+    {
+      "id": "ERP-H01",
+      "question": "List customer codes with their maximum cash and non-cash credit limits, agreed ledger-receipt days, and agreed cheque duration.",
+      "difficulty": "easy",
+      "domain": "sales",
+      "expected_tables": [
+        "gnd_crsls.tblCustomer"
+      ],
+      "fk_paths": [],
+      "driving_table": "gnd_crsls.tblCustomer",
+      "reference_sql": "SELECT\n    c.[CustomerCode],\n    c.[MaxCashCredit],\n    c.[MaxNonCashCredit],\n    c.[AgreedLedgerReceiveDays],\n    c.[AgreedChequesDuration]\nFROM [gnd_crsls].[tblCustomer] AS c;",
+      "execution_valid": true,
+      "result_columns": [
+        "CustomerCode",
+        "MaxCashCredit",
+        "MaxNonCashCredit",
+        "AgreedLedgerReceiveDays",
+        "AgreedChequesDuration"
+      ],
+      "row_count": 506,
+      "is_empty": false,
+      "review_reasons": [
+        "Some requested columns are entirely NULL or blank in this snapshot."
+      ],
+      "samples_retained": false,
+      "null_counts": {
+        "CustomerCode": 162,
+        "MaxCashCredit": 506,
+        "MaxNonCashCredit": 506,
+        "AgreedLedgerReceiveDays": 506,
+        "AgreedChequesDuration": 506
+      },
+      "blank_string_counts": {
+        "CustomerCode": 0,
+        "MaxCashCredit": 0,
+        "MaxNonCashCredit": 0,
+        "AgreedLedgerReceiveDays": 0,
+        "AgreedChequesDuration": 0
+      },
+      "driving_table_row_count": 506,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [
+        "MaxCashCredit",
+        "MaxNonCashCredit",
+        "AgreedLedgerReceiveDays",
+        "AgreedChequesDuration"
+      ],
+      "validation_seconds": 0.047,
+      "validated_at_utc": "2026-09-15T15:14:46.390510+00:00",
+      "requires_review": true
+    },
+    {
+      "id": "ERP-H02",
+      "question": "Show the names of purchasable services, their last recorded prices, and their configured payment delays in months.",
+      "difficulty": "easy",
+      "domain": "purchasing",
+      "expected_tables": [
+        "gnd_scpch.tblPurchasableService"
+      ],
+      "fk_paths": [],
+      "driving_table": "gnd_scpch.tblPurchasableService",
+      "reference_sql": "SELECT\n    s.[Name] AS [ServiceName],\n    s.[LastPrice],\n    s.[PaymentDelayInMonth]\nFROM [gnd_scpch].[tblPurchasableService] AS s;",
+      "execution_valid": true,
+      "result_columns": [
+        "ServiceName",
+        "LastPrice",
+        "PaymentDelayInMonth"
+      ],
+      "row_count": 76,
+      "is_empty": false,
+      "review_reasons": [
+        "Some requested columns are entirely NULL or blank in this snapshot."
+      ],
+      "samples_retained": false,
+      "null_counts": {
+        "ServiceName": 0,
+        "LastPrice": 68,
+        "PaymentDelayInMonth": 76
+      },
+      "blank_string_counts": {
+        "ServiceName": 0,
+        "LastPrice": 0,
+        "PaymentDelayInMonth": 0
+      },
+      "driving_table_row_count": 76,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [
+        "PaymentDelayInMonth"
+      ],
+      "validation_seconds": 0.063,
+      "validated_at_utc": "2026-09-15T15:14:46.458416+00:00",
+      "requires_review": true
+    },
+    {
+      "id": "ERP-H03",
+      "question": "List storage-location labels with their inventory identifiers and recorded volumes.",
+      "difficulty": "easy",
+      "domain": "inventory",
+      "expected_tables": [
+        "gnd_scinv.tblLocation"
+      ],
+      "fk_paths": [],
+      "driving_table": "gnd_scinv.tblLocation",
+      "reference_sql": "SELECT\n    l.[Label] AS [LocationLabel],\n    l.[InventoryID],\n    l.[Volume]\nFROM [gnd_scinv].[tblLocation] AS l;",
+      "execution_valid": true,
+      "result_columns": [
+        "LocationLabel",
+        "InventoryID",
+        "Volume"
+      ],
+      "row_count": 6743,
+      "is_empty": false,
+      "review_reasons": [
+        "Some requested columns are entirely NULL or blank in this snapshot."
+      ],
+      "samples_retained": false,
+      "null_counts": {
+        "LocationLabel": 0,
+        "InventoryID": 0,
+        "Volume": 6743
+      },
+      "blank_string_counts": {
+        "LocationLabel": 0,
+        "InventoryID": 0,
+        "Volume": 0
+      },
+      "driving_table_row_count": 6743,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [
+        "Volume"
+      ],
+      "validation_seconds": 0.125,
+      "validated_at_utc": "2026-09-15T15:14:46.573679+00:00",
+      "requires_review": true
+    },
+    {
+      "id": "ERP-H04",
+      "question": "List salary-tax lists with their payment dates and payable values, showing the company, tax-branch, and year-month identifiers.",
+      "difficulty": "easy",
+      "domain": "payroll",
+      "expected_tables": [
+        "gnd_hrpyr.tblSalaryTaxList"
+      ],
+      "fk_paths": [],
+      "driving_table": "gnd_hrpyr.tblSalaryTaxList",
+      "reference_sql": "SELECT\n    t.[PaymentDate],\n    t.[PayableValue],\n    t.[CompanyID],\n    t.[TaxBranchID],\n    t.[YearMonthID]\nFROM [gnd_hrpyr].[tblSalaryTaxList] AS t;",
+      "execution_valid": true,
+      "result_columns": [
+        "PaymentDate",
+        "PayableValue",
+        "CompanyID",
+        "TaxBranchID",
+        "YearMonthID"
+      ],
+      "row_count": 2,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "PaymentDate": 0,
+        "PayableValue": 1,
+        "CompanyID": 0,
+        "TaxBranchID": 0,
+        "YearMonthID": 0
+      },
+      "blank_string_counts": {
+        "PaymentDate": 0,
+        "PayableValue": 0,
+        "CompanyID": 0,
+        "TaxBranchID": 0,
+        "YearMonthID": 0
+      },
+      "driving_table_row_count": 2,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 0.015,
+      "validated_at_utc": "2026-09-15T15:14:46.600787+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H05",
+      "question": "Show daily project-report entries with the project identifier, report date, task title, description, reporter identifier, and recorded time spent.",
+      "difficulty": "easy",
+      "domain": "projects",
+      "expected_tables": [
+        "gnd_pjprj.tblDailyReport"
+      ],
+      "fk_paths": [],
+      "driving_table": "gnd_pjprj.tblDailyReport",
+      "reference_sql": "SELECT\n    r.[ProjectID],\n    r.[Date] AS [ReportDate],\n    r.[TaskTitle],\n    r.[Description],\n    r.[ReporterID],\n    r.[SpentTimeDur] AS [RecordedTimeSpent]\nFROM [gnd_pjprj].[tblDailyReport] AS r;",
+      "semantic_notes": [
+        "SpentTimeDur is returned as stored; no undocumented time unit is assumed."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "ProjectID",
+        "ReportDate",
+        "TaskTitle",
+        "Description",
+        "ReporterID",
+        "RecordedTimeSpent"
+      ],
+      "row_count": 0,
+      "is_empty": true,
+      "review_reasons": [
+        "Empty result: executable, but this snapshot cannot support meaningful result-based accuracy evaluation."
+      ],
+      "samples_retained": false,
+      "null_counts": {
+        "ProjectID": 0,
+        "ReportDate": 0,
+        "TaskTitle": 0,
+        "Description": 0,
+        "ReporterID": 0,
+        "RecordedTimeSpent": 0
+      },
+      "blank_string_counts": {
+        "ProjectID": 0,
+        "ReportDate": 0,
+        "TaskTitle": 0,
+        "Description": 0,
+        "ReporterID": 0,
+        "RecordedTimeSpent": 0
+      },
+      "driving_table_row_count": 0,
+      "row_count_matches_driving_table": true,
+      "validation_seconds": 0.032,
+      "validated_at_utc": "2026-09-15T15:14:46.627834+00:00",
+      "requires_review": true
+    },
+    {
+      "id": "ERP-H06",
+      "question": "Prepare a customer contact-address report showing customer code, street address, post-office box, and telephone number for each recorded address.",
+      "difficulty": "medium",
+      "domain": "sales",
+      "expected_tables": [
+        "gnd_crsls.tblCustomerAddress",
+        "gnd_crsls.tblCustomer"
+      ],
+      "fk_paths": [
+        "gnd_crsls.tblCustomerAddress.CustomerID -> gnd_crsls.tblCustomer.ID"
+      ],
+      "driving_table": "gnd_crsls.tblCustomerAddress",
+      "reference_sql": "SELECT\n    c.[CustomerCode],\n    a.[Address],\n    a.[POBox],\n    a.[Phone]\nFROM [gnd_crsls].[tblCustomerAddress] AS a\nINNER JOIN [gnd_crsls].[tblCustomer] AS c\n    ON a.[CustomerID] = c.[ID];",
+      "execution_valid": true,
+      "result_columns": [
+        "CustomerCode",
+        "Address",
+        "POBox",
+        "Phone"
+      ],
+      "row_count": 1721,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "CustomerCode": 50,
+        "Address": 0,
+        "POBox": 1717,
+        "Phone": 1693
+      },
+      "blank_string_counts": {
+        "CustomerCode": 0,
+        "Address": 1,
+        "POBox": 0,
+        "Phone": 0
+      },
+      "driving_table_row_count": 1721,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 0.265,
+      "validated_at_utc": "2026-09-15T15:14:46.895778+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H07",
+      "question": "For each supplier evaluation record, show the supplier identifier, evaluation date, recorded score, assessment criterion description, and whether the criterion is mandatory.",
+      "difficulty": "medium",
+      "domain": "purchasing",
+      "expected_tables": [
+        "gnd_scpch.tblSupplierEvaluation",
+        "gnd_scpch.tblSupplierEvaluationParameter"
+      ],
+      "fk_paths": [
+        "gnd_scpch.tblSupplierEvaluation.SupplierEvaluationParameterID -> gnd_scpch.tblSupplierEvaluationParameter.ID"
+      ],
+      "driving_table": "gnd_scpch.tblSupplierEvaluation",
+      "reference_sql": "SELECT\n    e.[SupplierID],\n    e.[DoneDate] AS [EvaluationDate],\n    e.[Score] AS [RecordedScore],\n    p.[Descriptions] AS [AssessmentCriterionDescription],\n    p.[IsMandatory]\nFROM [gnd_scpch].[tblSupplierEvaluation] AS e\nLEFT JOIN [gnd_scpch].[tblSupplierEvaluationParameter] AS p\n    ON e.[SupplierEvaluationParameterID] = p.[ID];",
+      "semantic_notes": [
+        "Preserve evaluations with no criterion; the recorded score comes from the evaluation, not the criterion definition."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "SupplierID",
+        "EvaluationDate",
+        "RecordedScore",
+        "AssessmentCriterionDescription",
+        "IsMandatory"
+      ],
+      "row_count": 0,
+      "is_empty": true,
+      "review_reasons": [
+        "Empty result: executable, but this snapshot cannot support meaningful result-based accuracy evaluation."
+      ],
+      "samples_retained": false,
+      "null_counts": {
+        "SupplierID": 0,
+        "EvaluationDate": 0,
+        "RecordedScore": 0,
+        "AssessmentCriterionDescription": 0,
+        "IsMandatory": 0
+      },
+      "blank_string_counts": {
+        "SupplierID": 0,
+        "EvaluationDate": 0,
+        "RecordedScore": 0,
+        "AssessmentCriterionDescription": 0,
+        "IsMandatory": 0
+      },
+      "driving_table_row_count": 0,
+      "row_count_matches_driving_table": true,
+      "validation_seconds": 0.032,
+      "validated_at_utc": "2026-09-15T15:14:46.924485+00:00",
+      "requires_review": true
+    },
+    {
+      "id": "ERP-H08",
+      "question": "Show physical stock-count sheets with their count code and date, and each line's sequence, scanned barcode, counted quantity, package count, and last-update time.",
+      "difficulty": "medium",
+      "domain": "inventory",
+      "expected_tables": [
+        "gnd_scinv.tblCounter",
+        "gnd_scinv.tblCounterDetail"
+      ],
+      "fk_paths": [
+        "gnd_scinv.tblCounterDetail.CounterID -> gnd_scinv.tblCounter.ID"
+      ],
+      "driving_table": "gnd_scinv.tblCounterDetail",
+      "reference_sql": "SELECT\n    c.[Code] AS [CountCode],\n    c.[DoneDate] AS [CountDate],\n    d.[Sequence] AS [LineSequence],\n    d.[BarCode] AS [ScannedBarcode],\n    d.[Qty] AS [CountedQuantity],\n    d.[PackCount] AS [PackageCount],\n    d.[LastUpdateTime]\nFROM [gnd_scinv].[tblCounterDetail] AS d\nINNER JOIN [gnd_scinv].[tblCounter] AS c\n    ON d.[CounterID] = c.[ID];",
+      "semantic_notes": [
+        "One row per count line; headers without lines do not create synthetic line results."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "CountCode",
+        "CountDate",
+        "LineSequence",
+        "ScannedBarcode",
+        "CountedQuantity",
+        "PackageCount",
+        "LastUpdateTime"
+      ],
+      "row_count": 0,
+      "is_empty": true,
+      "review_reasons": [
+        "Empty result: executable, but this snapshot cannot support meaningful result-based accuracy evaluation."
+      ],
+      "samples_retained": false,
+      "null_counts": {
+        "CountCode": 0,
+        "CountDate": 0,
+        "LineSequence": 0,
+        "ScannedBarcode": 0,
+        "CountedQuantity": 0,
+        "PackageCount": 0,
+        "LastUpdateTime": 0
+      },
+      "blank_string_counts": {
+        "CountCode": 0,
+        "CountDate": 0,
+        "LineSequence": 0,
+        "ScannedBarcode": 0,
+        "CountedQuantity": 0,
+        "PackageCount": 0,
+        "LastUpdateTime": 0
+      },
+      "driving_table_row_count": 0,
+      "row_count_matches_driving_table": true,
+      "validation_seconds": 0.031,
+      "validated_at_utc": "2026-09-15T15:14:46.955568+00:00",
+      "requires_review": true
+    },
+    {
+      "id": "ERP-H09",
+      "question": "For each employee identifier, list the required personnel-document types using their stored English labels, document sequence, attachment flag, and picture filename.",
+      "difficulty": "medium",
+      "domain": "hr/personnel",
+      "expected_tables": [
+        "gnd_hrprs.tblEmployeeRequiredDocument",
+        "gnd_hrprs.tblDocumentType"
+      ],
+      "fk_paths": [
+        "gnd_hrprs.tblEmployeeRequiredDocument.DocumentTypeID -> gnd_hrprs.tblDocumentType.ID"
+      ],
+      "driving_table": "gnd_hrprs.tblEmployeeRequiredDocument",
+      "reference_sql": "SELECT\n    d.[EmployeeID],\n    t.[English] AS [DocumentTypeEnglish],\n    d.[Sequence] AS [DocumentSequence],\n    d.[HasAttachment],\n    d.[PictureName]\nFROM [gnd_hrprs].[tblEmployeeRequiredDocument] AS d\nINNER JOIN [gnd_hrprs].[tblDocumentType] AS t\n    ON d.[DocumentTypeID] = t.[ID];",
+      "execution_valid": true,
+      "result_columns": ["EmployeeID", "DocumentTypeEnglish", "DocumentSequence", "HasAttachment", "PictureName"],
+      "row_count": "not fully counted",
+      "row_count_lower_bound": 10,
+      "row_count_is_exact": false,
+      "is_empty": false,
+      "sample_rows_fetched": 10,
+      "validation_scope": "execution and first 10 rows only",
+      "review_reasons": [],
+      "samples_retained": false,
+      "previous_execution_error": {
+        "type": "OperationalError",
+        "sqlstate": "08004",
+        "native_codes": [916]
+      },
+      "expected_result_columns": ["EmployeeID", "DocumentTypeEnglish", "DocumentSequence", "HasAttachment", "PictureName"],
+      "previous_diagnosis": {
+        "schema_definable": true,
+        "computed_column": "gnd_hrprs.tblEmployeeRequiredDocument.HasAttachment",
+        "verified_function_dependency": "gnd_hrprs.fnEmployeeRequiredDocumentHasAttachmentCall",
+        "previously_observed_table_counts": {
+          "gnd_hrprs.tblEmployeeRequiredDocument": 85,
+          "gnd_hrprs.tblDocumentType": 10
+        },
+        "downstream_function_dependency_verified": false,
+        "resumed_connection_attempts": 2,
+        "resumed_connection_sqlstate": "08001",
+        "resumed_connection_native_codes": [258, 0, 258],
+        "resumed_queries_executed": false,
+        "reference_sql_changed": false
+      },
+      "diagnosis": {
+        "status": "resolved",
+        "media_target": "GD4_60_SPN_Media.gnd_egbse.tblMedia",
+        "resolution": "Unchanged H09 SELECT succeeded after the DBA reported granting narrowly scoped read-only access.",
+        "reference_sql_changed": false,
+        "other_cases_rerun": false
+      },
+      "validation_seconds": 0.156,
+      "validated_at_utc": "2026-09-18T16:11:02.129550+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H10",
+      "question": "List configured payroll tax brackets with their effective start and end dates, tax-branch identifier, bracket row number, minimum and maximum salary values, tax value, and tax percentage.",
+      "difficulty": "medium",
+      "domain": "payroll",
+      "expected_tables": [
+        "gnd_hrpyr.tblTaxTable",
+        "gnd_hrpyr.tblTaxTableDetail"
+      ],
+      "fk_paths": [
+        "gnd_hrpyr.tblTaxTableDetail.TaxTableID -> gnd_hrpyr.tblTaxTable.ID"
+      ],
+      "driving_table": "gnd_hrpyr.tblTaxTableDetail",
+      "reference_sql": "SELECT\n    t.[FromDate] AS [EffectiveStartDate],\n    t.[ToDate] AS [EffectiveEndDate],\n    t.[TaxBranchID],\n    d.[Row] AS [BracketRowNumber],\n    d.[MinSalaryValue],\n    d.[MaxSalaryValue],\n    d.[TaxValue],\n    d.[TaxPercent]\nFROM [gnd_hrpyr].[tblTaxTableDetail] AS d\nLEFT JOIN [gnd_hrpyr].[tblTaxTable] AS t\n    ON d.[TaxTableID] = t.[ID];",
+      "semantic_notes": [
+        "TaxTableID is nullable; preserve every bracket. Report configured amounts and percentages without calculating tax."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "EffectiveStartDate",
+        "EffectiveEndDate",
+        "TaxBranchID",
+        "BracketRowNumber",
+        "MinSalaryValue",
+        "MaxSalaryValue",
+        "TaxValue",
+        "TaxPercent"
+      ],
+      "row_count": 12,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "EffectiveStartDate": 0,
+        "EffectiveEndDate": 0,
+        "TaxBranchID": 0,
+        "BracketRowNumber": 0,
+        "MinSalaryValue": 0,
+        "MaxSalaryValue": 0,
+        "TaxValue": 0,
+        "TaxPercent": 0
+      },
+      "blank_string_counts": {
+        "EffectiveStartDate": 0,
+        "EffectiveEndDate": 0,
+        "TaxBranchID": 0,
+        "BracketRowNumber": 0,
+        "MinSalaryValue": 0,
+        "MaxSalaryValue": 0,
+        "TaxValue": 0,
+        "TaxPercent": 0
+      },
+      "driving_table_row_count": 12,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 0.031,
+      "validated_at_utc": "2026-09-15T15:14:47.022617+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H11",
+      "question": "List manufacturing-report stoppage entries with the manufacturing-record identifier, stop code, start and end times, and stop-type description.",
+      "difficulty": "medium",
+      "domain": "production",
+      "expected_tables": [
+        "gnd_scprd.tblProductionReportManufacturingStopDetail",
+        "gnd_amast.tblStopType"
+      ],
+      "fk_paths": [
+        "gnd_scprd.tblProductionReportManufacturingStopDetail.StopTypeID -> gnd_amast.tblStopType.ID"
+      ],
+      "driving_table": "gnd_scprd.tblProductionReportManufacturingStopDetail",
+      "reference_sql": "SELECT\n    d.[ProductionReportManufacturingID],\n    d.[StopCode],\n    d.[StartTime],\n    d.[EndTime],\n    t.[Description] AS [StopTypeDescription]\nFROM [gnd_scprd].[tblProductionReportManufacturingStopDetail] AS d\nLEFT JOIN [gnd_amast].[tblStopType] AS t\n    ON d.[StopTypeID] = t.[ID];",
+      "semantic_notes": [
+        "StopTypeID is nullable; preserve unclassified stoppages."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "ProductionReportManufacturingID",
+        "StopCode",
+        "StartTime",
+        "EndTime",
+        "StopTypeDescription"
+      ],
+      "row_count": 12031,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "ProductionReportManufacturingID": 0,
+        "StopCode": 548,
+        "StartTime": 2,
+        "EndTime": 0,
+        "StopTypeDescription": 3
+      },
+      "blank_string_counts": {
+        "ProductionReportManufacturingID": 0,
+        "StopCode": 0,
+        "StartTime": 0,
+        "EndTime": 0,
+        "StopTypeDescription": 0
+      },
+      "driving_table_row_count": 12031,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 0.297,
+      "validated_at_utc": "2026-09-15T15:14:47.308982+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H12",
+      "question": "Show carton-inspection results with inspection date and packing date, and each bobbin's number, measured weight, humidity, cone hardness, and checker.",
+      "difficulty": "medium",
+      "domain": "quality control",
+      "expected_tables": [
+        "gnd_scqam.tblCartonInspectionTest",
+        "gnd_scqam.tblCartonInspectionTestDetail"
+      ],
+      "fk_paths": [
+        "gnd_scqam.tblCartonInspectionTestDetail.CartonInspectionTestID -> gnd_scqam.tblCartonInspectionTest.ID"
+      ],
+      "driving_table": "gnd_scqam.tblCartonInspectionTestDetail",
+      "reference_sql": "SELECT\n    t.[Date] AS [InspectionDate],\n    t.[PackingDate],\n    d.[BobbinNo],\n    d.[Weight] AS [MeasuredWeight],\n    d.[Humidity],\n    d.[ConeHardness],\n    d.[Checker]\nFROM [gnd_scqam].[tblCartonInspectionTestDetail] AS d\nINNER JOIN [gnd_scqam].[tblCartonInspectionTest] AS t\n    ON d.[CartonInspectionTestID] = t.[ID];",
+      "semantic_notes": [
+        "ConeHardness is a nullable bit flag, returned as stored, not a numeric hardness measurement."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "InspectionDate",
+        "PackingDate",
+        "BobbinNo",
+        "MeasuredWeight",
+        "Humidity",
+        "ConeHardness",
+        "Checker"
+      ],
+      "row_count": 879,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "InspectionDate": 0,
+        "PackingDate": 0,
+        "BobbinNo": 0,
+        "MeasuredWeight": 38,
+        "Humidity": 75,
+        "ConeHardness": 357,
+        "Checker": 212
+      },
+      "blank_string_counts": {
+        "InspectionDate": 0,
+        "PackingDate": 0,
+        "BobbinNo": 0,
+        "MeasuredWeight": 0,
+        "Humidity": 0,
+        "ConeHardness": 0,
+        "Checker": 0
+      },
+      "driving_table_row_count": 879,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 0.11,
+      "validated_at_utc": "2026-09-15T15:14:47.425794+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H13",
+      "question": "Trace serial numbers recorded against shipment-loading lines, showing the loading code and date, line sequence, quantity, package count, and serial number.",
+      "difficulty": "hard",
+      "domain": "sales",
+      "expected_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_crsls.tblLoadingDetail",
+        "gnd_crsls.tblLoadingSerialDetail"
+      ],
+      "fk_paths": [
+        "gnd_crsls.tblLoadingSerialDetail.LoadingDetailIG -> gnd_crsls.tblLoadingDetail.IG",
+        "gnd_crsls.tblLoadingDetail.LoadingID -> gnd_crsls.tblLoading.ID"
+      ],
+      "driving_table": "gnd_crsls.tblLoadingSerialDetail",
+      "reference_sql": "SELECT\n    h.[Code] AS [LoadingCode],\n    h.[DoneDate] AS [LoadingDate],\n    d.[Sequence] AS [LineSequence],\n    d.[Qty] AS [Quantity],\n    d.[PackCount] AS [PackageCount],\n    s.[Serial]\nFROM [gnd_crsls].[tblLoadingSerialDetail] AS s\nINNER JOIN [gnd_crsls].[tblLoadingDetail] AS d\n    ON s.[LoadingDetailIG] = d.[IG]\nINNER JOIN [gnd_crsls].[tblLoading] AS h\n    ON d.[LoadingID] = h.[ID];",
+      "semantic_notes": [
+        "One row per recorded serial; line quantity and package count repeat for each serial and must not be summed at this grain."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "LoadingCode",
+        "LoadingDate",
+        "LineSequence",
+        "Quantity",
+        "PackageCount",
+        "Serial"
+      ],
+      "row_count": 591085,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "LoadingCode": 940,
+        "LoadingDate": 0,
+        "LineSequence": 0,
+        "Quantity": 0,
+        "PackageCount": 0,
+        "Serial": 0
+      },
+      "blank_string_counts": {
+        "LoadingCode": 0,
+        "LoadingDate": 0,
+        "LineSequence": 0,
+        "Quantity": 0,
+        "PackageCount": 0,
+        "Serial": 0
+      },
+      "driving_table_row_count": 591085,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 16.218,
+      "validated_at_utc": "2026-09-15T15:15:03.648233+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H14",
+      "question": "Show service-purchase requests with their request code and date, line sequence, service name, requested quantity, proposed fee, buying fee, and recorded line total.",
+      "difficulty": "hard",
+      "domain": "purchasing",
+      "expected_tables": [
+        "gnd_scpch.tblRequestBuyService",
+        "gnd_scpch.tblRequestBuyServiceDetail",
+        "gnd_scpch.tblPurchasableService"
+      ],
+      "fk_paths": [
+        "gnd_scpch.tblRequestBuyServiceDetail.RequestBuyServiceID -> gnd_scpch.tblRequestBuyService.ID",
+        "gnd_scpch.tblRequestBuyServiceDetail.PurchasableServiceID -> gnd_scpch.tblPurchasableService.ID"
+      ],
+      "driving_table": "gnd_scpch.tblRequestBuyServiceDetail",
+      "reference_sql": "SELECT\n    h.[Code] AS [RequestCode],\n    h.[DoneDate] AS [RequestDate],\n    d.[Sequence] AS [LineSequence],\n    s.[Name] AS [ServiceName],\n    d.[Qty] AS [RequestedQuantity],\n    d.[ProposalFee] AS [ProposedFee],\n    d.[BuyFee] AS [BuyingFee],\n    d.[TotalValue] AS [RecordedLineTotal]\nFROM [gnd_scpch].[tblRequestBuyServiceDetail] AS d\nINNER JOIN [gnd_scpch].[tblRequestBuyService] AS h\n    ON d.[RequestBuyServiceID] = h.[ID]\nINNER JOIN [gnd_scpch].[tblPurchasableService] AS s\n    ON d.[PurchasableServiceID] = s.[ID];",
+      "execution_valid": true,
+      "result_columns": [
+        "RequestCode",
+        "RequestDate",
+        "LineSequence",
+        "ServiceName",
+        "RequestedQuantity",
+        "ProposedFee",
+        "BuyingFee",
+        "RecordedLineTotal"
+      ],
+      "row_count": 176,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "RequestCode": 5,
+        "RequestDate": 0,
+        "LineSequence": 0,
+        "ServiceName": 0,
+        "RequestedQuantity": 0,
+        "ProposedFee": 153,
+        "BuyingFee": 0,
+        "RecordedLineTotal": 0
+      },
+      "blank_string_counts": {
+        "RequestCode": 0,
+        "RequestDate": 0,
+        "LineSequence": 0,
+        "ServiceName": 0,
+        "RequestedQuantity": 0,
+        "ProposedFee": 0,
+        "BuyingFee": 0,
+        "RecordedLineTotal": 0
+      },
+      "driving_table_row_count": 176,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 0.063,
+      "validated_at_utc": "2026-09-15T15:15:03.705646+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H15",
+      "question": "Prepare a job-classification register showing each job title, its legal-position name and configured trial period, and its job-group description.",
+      "difficulty": "hard",
+      "domain": "hr/personnel",
+      "expected_tables": [
+        "gnd_hrprs.tblJobTitle",
+        "gnd_hrprs.tblLegalPosition",
+        "gnd_hrprs.tblJobGroup"
+      ],
+      "fk_paths": [
+        "gnd_hrprs.tblJobTitle.LegalPositionID -> gnd_hrprs.tblLegalPosition.ID",
+        "gnd_hrprs.tblJobTitle.JobGroupID -> gnd_hrprs.tblJobGroup.ID"
+      ],
+      "driving_table": "gnd_hrprs.tblJobTitle",
+      "reference_sql": "SELECT\n    j.[JobTitle],\n    p.[Name] AS [LegalPositionName],\n    p.[TrialPeriod],\n    g.[Description] AS [JobGroupDescription]\nFROM [gnd_hrprs].[tblJobTitle] AS j\nINNER JOIN [gnd_hrprs].[tblLegalPosition] AS p\n    ON j.[LegalPositionID] = p.[ID]\nINNER JOIN [gnd_hrprs].[tblJobGroup] AS g\n    ON j.[JobGroupID] = g.[ID];",
+      "semantic_notes": [
+        "TrialPeriod is returned as configured; no undocumented duration unit is assumed."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "JobTitle",
+        "LegalPositionName",
+        "TrialPeriod",
+        "JobGroupDescription"
+      ],
+      "row_count": 149,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "JobTitle": 0,
+        "LegalPositionName": 0,
+        "TrialPeriod": 0,
+        "JobGroupDescription": 0
+      },
+      "blank_string_counts": {
+        "JobTitle": 0,
+        "LegalPositionName": 0,
+        "TrialPeriod": 0,
+        "JobGroupDescription": 0
+      },
+      "driving_table_row_count": 149,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 0.047,
+      "validated_at_utc": "2026-09-15T15:15:03.755604+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H16",
+      "question": "Break down recorded yarn defects by equipment identifier and spindle head number, showing the stored English defect-type label, primary-defect flag, affected spindle count, and total spindle weight recorded for each defect entry.",
+      "difficulty": "hard",
+      "domain": "production",
+      "expected_tables": [
+        "gnd_scprd.tblYarnDefect",
+        "gnd_scprd.tblYarnDefectSpindleDetail",
+        "gnd_scprd.tblYarnDefectSpindleDefectionDetail",
+        "gnd_scprd.tblDefectionType"
+      ],
+      "fk_paths": [
+        "gnd_scprd.tblYarnDefectSpindleDefectionDetail.YarnDefectSpindleIG -> gnd_scprd.tblYarnDefectSpindleDetail.IG",
+        "gnd_scprd.tblYarnDefectSpindleDetail.YarnDefectID -> gnd_scprd.tblYarnDefect.ID",
+        "gnd_scprd.tblYarnDefectSpindleDefectionDetail.DefectionTypeID -> gnd_scprd.tblDefectionType.ID"
+      ],
+      "driving_table": "gnd_scprd.tblYarnDefectSpindleDefectionDetail",
+      "reference_sql": "SELECT\n    y.[EquipmentID],\n    s.[HeadNumber],\n    t.[English] AS [DefectTypeEnglish],\n    d.[IsPrimaryDefection] AS [IsPrimaryDefect],\n    d.[SpindleCount] AS [AffectedSpindleCount],\n    d.[SpindleTotalWeight] AS [RecordedTotalSpindleWeight]\nFROM [gnd_scprd].[tblYarnDefectSpindleDefectionDetail] AS d\nINNER JOIN [gnd_scprd].[tblYarnDefectSpindleDetail] AS s\n    ON d.[YarnDefectSpindleIG] = s.[IG]\nINNER JOIN [gnd_scprd].[tblYarnDefect] AS y\n    ON s.[YarnDefectID] = y.[ID]\nINNER JOIN [gnd_scprd].[tblDefectionType] AS t\n    ON d.[DefectionTypeID] = t.[ID];",
+      "semantic_notes": [
+        "One row per defect entry; use that entry's count and weight, without aggregating parent spindle totals."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "EquipmentID",
+        "HeadNumber",
+        "DefectTypeEnglish",
+        "IsPrimaryDefect",
+        "AffectedSpindleCount",
+        "RecordedTotalSpindleWeight"
+      ],
+      "row_count": 1249,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "EquipmentID": 0,
+        "HeadNumber": 65,
+        "DefectTypeEnglish": 0,
+        "IsPrimaryDefect": 0,
+        "AffectedSpindleCount": 0,
+        "RecordedTotalSpindleWeight": 1205
+      },
+      "blank_string_counts": {
+        "EquipmentID": 0,
+        "HeadNumber": 0,
+        "DefectTypeEnglish": 0,
+        "IsPrimaryDefect": 0,
+        "AffectedSpindleCount": 0,
+        "RecordedTotalSpindleWeight": 0
+      },
+      "driving_table_row_count": 1249,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 0.093,
+      "validated_at_utc": "2026-09-15T15:15:03.837673+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H17",
+      "question": "Show audit-inspection question scores with audit date, shift name, finalization flag, question title, question maximum score, awarded score, and the recorded detail description.",
+      "difficulty": "hard",
+      "domain": "quality control",
+      "expected_tables": [
+        "gnd_scqam.tblAuditInspection",
+        "gnd_scqam.tblAuditInspectionDetail",
+        "gnd_scqam.tblAuditQuestion"
+      ],
+      "fk_paths": [
+        "gnd_scqam.tblAuditInspectionDetail.AuditInspectionID -> gnd_scqam.tblAuditInspection.ID",
+        "gnd_scqam.tblAuditInspectionDetail.AuditQuestionID -> gnd_scqam.tblAuditQuestion.ID"
+      ],
+      "driving_table": "gnd_scqam.tblAuditInspectionDetail",
+      "reference_sql": "SELECT\n    i.[AuditDate],\n    i.[ShiftName],\n    i.[IsFinal],\n    q.[QuestionTitle],\n    q.[MaxScore] AS [QuestionMaximumScore],\n    d.[Score] AS [AwardedScore],\n    d.[Description] AS [DetailDescription]\nFROM [gnd_scqam].[tblAuditInspectionDetail] AS d\nINNER JOIN [gnd_scqam].[tblAuditInspection] AS i\n    ON d.[AuditInspectionID] = i.[ID]\nINNER JOIN [gnd_scqam].[tblAuditQuestion] AS q\n    ON d.[AuditQuestionID] = q.[ID];",
+      "semantic_notes": [
+        "Use the current question-definition maximum, not the inspection total maximum. No IsDeleted/IsFinal filter is requested or applied."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "AuditDate",
+        "ShiftName",
+        "IsFinal",
+        "QuestionTitle",
+        "QuestionMaximumScore",
+        "AwardedScore",
+        "DetailDescription"
+      ],
+      "row_count": 7,
+      "is_empty": false,
+      "review_reasons": [
+        "Some requested columns are entirely NULL or blank in this snapshot."
+      ],
+      "samples_retained": false,
+      "null_counts": {
+        "AuditDate": 0,
+        "ShiftName": 0,
+        "IsFinal": 0,
+        "QuestionTitle": 0,
+        "QuestionMaximumScore": 0,
+        "AwardedScore": 0,
+        "DetailDescription": 0
+      },
+      "blank_string_counts": {
+        "AuditDate": 0,
+        "ShiftName": 0,
+        "IsFinal": 0,
+        "QuestionTitle": 0,
+        "QuestionMaximumScore": 0,
+        "AwardedScore": 0,
+        "DetailDescription": 7
+      },
+      "driving_table_row_count": 7,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [
+        "DetailDescription"
+      ],
+      "validation_seconds": 0.047,
+      "validated_at_utc": "2026-09-15T15:15:03.883351+00:00",
+      "requires_review": true
+    },
+    {
+      "id": "ERP-H18",
+      "question": "Prepare an equipment-failure register showing equipment serial number and model, failure date, failure-type description, and the recorded failure description and comment.",
+      "difficulty": "hard",
+      "domain": "assets/equipment",
+      "expected_tables": [
+        "gnd_amast.tblEquipmentFailure",
+        "gnd_amast.tblEquipment",
+        "gnd_amast.tblFailureType"
+      ],
+      "fk_paths": [
+        "gnd_amast.tblEquipmentFailure.EquipmentID -> gnd_amast.tblEquipment.ID",
+        "gnd_amast.tblEquipmentFailure.FailureTypeID -> gnd_amast.tblFailureType.ID"
+      ],
+      "driving_table": "gnd_amast.tblEquipmentFailure",
+      "reference_sql": "SELECT\n    e.[SerialNumber] AS [EquipmentSerialNumber],\n    e.[Model] AS [EquipmentModel],\n    f.[FailureDate],\n    t.[Description] AS [FailureTypeDescription],\n    f.[Description] AS [FailureDescription],\n    f.[Comment] AS [FailureComment]\nFROM [gnd_amast].[tblEquipmentFailure] AS f\nINNER JOIN [gnd_amast].[tblEquipment] AS e\n    ON f.[EquipmentID] = e.[ID]\nINNER JOIN [gnd_amast].[tblFailureType] AS t\n    ON f.[FailureTypeID] = t.[ID];",
+      "execution_valid": true,
+      "result_columns": [
+        "EquipmentSerialNumber",
+        "EquipmentModel",
+        "FailureDate",
+        "FailureTypeDescription",
+        "FailureDescription",
+        "FailureComment"
+      ],
+      "row_count": 0,
+      "is_empty": true,
+      "review_reasons": [
+        "Empty result: executable, but this snapshot cannot support meaningful result-based accuracy evaluation."
+      ],
+      "samples_retained": false,
+      "null_counts": {
+        "EquipmentSerialNumber": 0,
+        "EquipmentModel": 0,
+        "FailureDate": 0,
+        "FailureTypeDescription": 0,
+        "FailureDescription": 0,
+        "FailureComment": 0
+      },
+      "blank_string_counts": {
+        "EquipmentSerialNumber": 0,
+        "EquipmentModel": 0,
+        "FailureDate": 0,
+        "FailureTypeDescription": 0,
+        "FailureDescription": 0,
+        "FailureComment": 0
+      },
+      "driving_table_row_count": 0,
+      "row_count_matches_driving_table": true,
+      "validation_seconds": 0.032,
+      "validated_at_utc": "2026-09-15T15:15:03.914644+00:00",
+      "requires_review": true
+    },
+    {
+      "id": "ERP-H19",
+      "question": "Show accounting transaction lines with transaction code and document date, row number, account code and title, line description, debit amount, and credit amount.",
+      "difficulty": "hard",
+      "domain": "finance/accounting",
+      "expected_tables": [
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblAccount"
+      ],
+      "fk_paths": [
+        "gnd_fiaci.tblTransDetail.TransID -> gnd_fiaci.tblTrans.ID",
+        "gnd_fiaci.tblTransDetail.AccountID -> gnd_fiaci.tblAccount.ID"
+      ],
+      "driving_table": "gnd_fiaci.tblTransDetail",
+      "reference_sql": "SELECT\n    t.[TransCode] AS [TransactionCode],\n    t.[DocDate] AS [DocumentDate],\n    d.[RowNumber],\n    a.[AccountCode],\n    a.[Title] AS [AccountTitle],\n    d.[Description] AS [LineDescription],\n    d.[Debit] AS [DebitAmount],\n    d.[Credit] AS [CreditAmount]\nFROM [gnd_fiaci].[tblTransDetail] AS d\nINNER JOIN [gnd_fiaci].[tblTrans] AS t\n    ON d.[TransID] = t.[ID]\nINNER JOIN [gnd_fiaci].[tblAccount] AS a\n    ON d.[AccountID] = a.[ID];",
+      "execution_valid": true,
+      "result_columns": [
+        "TransactionCode",
+        "DocumentDate",
+        "RowNumber",
+        "AccountCode",
+        "AccountTitle",
+        "LineDescription",
+        "DebitAmount",
+        "CreditAmount"
+      ],
+      "row_count": 445786,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "TransactionCode": 86089,
+        "DocumentDate": 0,
+        "RowNumber": 0,
+        "AccountCode": 0,
+        "AccountTitle": 0,
+        "LineDescription": 15370,
+        "DebitAmount": 0,
+        "CreditAmount": 0
+      },
+      "blank_string_counts": {
+        "TransactionCode": 0,
+        "DocumentDate": 0,
+        "RowNumber": 0,
+        "AccountCode": 0,
+        "AccountTitle": 0,
+        "LineDescription": 1922,
+        "DebitAmount": 0,
+        "CreditAmount": 0
+      },
+      "driving_table_row_count": 445786,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 50.296,
+      "validated_at_utc": "2026-09-15T15:15:54.222394+00:00",
+      "requires_review": false
+    },
+    {
+      "id": "ERP-H20",
+      "question": "Show project steps with the project's stored English name, step sequence and stored English step label, start and end dates, recorded duration, model-step default duration, and completion and not-needed flags.",
+      "difficulty": "hard",
+      "domain": "projects",
+      "expected_tables": [
+        "gnd_pjprj.tblProjectStep",
+        "gnd_pjprj.tblProject",
+        "gnd_pjprj.tblModelStep",
+        "gnd_pjprj.tblStep"
+      ],
+      "fk_paths": [
+        "gnd_pjprj.tblProjectStep.ProjectID -> gnd_pjprj.tblProject.ID",
+        "gnd_pjprj.tblProjectStep.ModelStepID -> gnd_pjprj.tblModelStep.ID",
+        "gnd_pjprj.tblModelStep.StepID -> gnd_pjprj.tblStep.ID"
+      ],
+      "driving_table": "gnd_pjprj.tblProjectStep",
+      "reference_sql": "SELECT\n    p.[English] AS [ProjectEnglishName],\n    ps.[Sequence] AS [StepSequence],\n    s.[English] AS [StepEnglishLabel],\n    ps.[StartDate],\n    ps.[EndDate],\n    ps.[Duration] AS [RecordedDuration],\n    ms.[DefaultDuration] AS [ModelStepDefaultDuration],\n    ps.[IsDone],\n    ps.[NotNeeded]\nFROM [gnd_pjprj].[tblProjectStep] AS ps\nINNER JOIN [gnd_pjprj].[tblProject] AS p\n    ON ps.[ProjectID] = p.[ID]\nLEFT JOIN [gnd_pjprj].[tblModelStep] AS ms\n    ON ps.[ModelStepID] = ms.[ID]\nLEFT JOIN [gnd_pjprj].[tblStep] AS s\n    ON ms.[StepID] = s.[ID];",
+      "semantic_notes": [
+        "Preserve project steps with no ModelStepID; missing labels and defaults remain NULL. Durations are returned as stored."
+      ],
+      "execution_valid": true,
+      "result_columns": [
+        "ProjectEnglishName",
+        "StepSequence",
+        "StepEnglishLabel",
+        "StartDate",
+        "EndDate",
+        "RecordedDuration",
+        "ModelStepDefaultDuration",
+        "IsDone",
+        "NotNeeded"
+      ],
+      "row_count": 211,
+      "is_empty": false,
+      "review_reasons": [],
+      "samples_retained": false,
+      "null_counts": {
+        "ProjectEnglishName": 0,
+        "StepSequence": 0,
+        "StepEnglishLabel": 0,
+        "StartDate": 0,
+        "EndDate": 0,
+        "RecordedDuration": 0,
+        "ModelStepDefaultDuration": 0,
+        "IsDone": 0,
+        "NotNeeded": 0
+      },
+      "blank_string_counts": {
+        "ProjectEnglishName": 0,
+        "StepSequence": 0,
+        "StepEnglishLabel": 0,
+        "StartDate": 0,
+        "EndDate": 0,
+        "RecordedDuration": 0,
+        "ModelStepDefaultDuration": 0,
+        "IsDone": 0,
+        "NotNeeded": 0
+      },
+      "driving_table_row_count": 211,
+      "row_count_matches_driving_table": true,
+      "entirely_null_or_blank_columns": [],
+      "validation_seconds": 0.063,
+      "validated_at_utc": "2026-09-15T15:15:54.284147+00:00",
+      "requires_review": false
+    }
+  ]
+}
