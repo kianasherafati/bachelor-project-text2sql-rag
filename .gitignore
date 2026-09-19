@@ -37,3 +37,5 @@ retrieval/business_alias_catalog.json
 retrieval/business_alias_translation_queue.jsonevaluation/alias_retrieval_comparison_results.json
 evaluation/alias_retrieval_comparison_results.json
 retrieval/business_alias_translation_queue.json
+evaluation/alias_bm25_retrieval_comparison_results.json
+evaluation/bm25_retrieval_comparison_results.json
