@@ -1,0 +1,204 @@
+{
+  "status": "frozen_before_chunked_retrieval_evaluation",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_max_sequence_length": 256,
+  "effective_original_content_boundary": 254,
+  "method": "Tokenize the frozen original table document without special tokens; record the 1-based token position at the original column-line marker.",
+  "entries": [
+    {
+      "table": "gnd_hrprs.tblEmployee",
+      "field": "EmploymentDate",
+      "original_table_document_token_count": 15506,
+      "field_record_start_token_position_1_based": 460,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "2324bf1d4c192c96208a7b2bef99062af62a0a509dcc677351887ad25742063d",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- EmploymentDate "
+      }
+    },
+    {
+      "table": "gnd_hrprs.tblEmployee",
+      "field": "EmploymentEndDate",
+      "original_table_document_token_count": 15506,
+      "field_record_start_token_position_1_based": 471,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "2324bf1d4c192c96208a7b2bef99062af62a0a509dcc677351887ad25742063d",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- EmploymentEndDate "
+      }
+    },
+    {
+      "table": "gnd_hrprs.tblEmployee",
+      "field": "IsLeaved",
+      "original_table_document_token_count": 15506,
+      "field_record_start_token_position_1_based": 484,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "2324bf1d4c192c96208a7b2bef99062af62a0a509dcc677351887ad25742063d",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- IsLeaved "
+      }
+    },
+    {
+      "table": "gnd_hrprs.tblEmployee",
+      "field": "ReasonOfLeave",
+      "original_table_document_token_count": 15506,
+      "field_record_start_token_position_1_based": 678,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "2324bf1d4c192c96208a7b2bef99062af62a0a509dcc677351887ad25742063d",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- ReasonOfLeave "
+      }
+    },
+    {
+      "table": "gnd_hrcio.tblEmployeeShift",
+      "field": "EndDateStatus",
+      "original_table_document_token_count": 770,
+      "field_record_start_token_position_1_based": 258,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "cd1c45f4eb43cbe4aa7fe8ad2135299a73c0fcbb7551a3ea7f3f502fe6b926ac",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- EndDateStatus "
+      }
+    },
+    {
+      "table": "gnd_scprd.tblPacking",
+      "field": "PackagingTypeID",
+      "original_table_document_token_count": 2044,
+      "field_record_start_token_position_1_based": 293,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "c0c0cfee617e1a35a636062e1bcc8cfa22dd0d78197b12e1cd5314d5be7a3c9c",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- PackagingTypeID "
+      }
+    },
+    {
+      "table": "gnd_scprd.tblPacking",
+      "field": "NetWeight",
+      "original_table_document_token_count": 2044,
+      "field_record_start_token_position_1_based": 732,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "c0c0cfee617e1a35a636062e1bcc8cfa22dd0d78197b12e1cd5314d5be7a3c9c",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- NetWeight "
+      }
+    },
+    {
+      "table": "gnd_amspt.tblFeedbackCheckList",
+      "field": "SensorValue",
+      "original_table_document_token_count": 531,
+      "field_record_start_token_position_1_based": 256,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "202ccc64c46f888addc5ffd4391af0d193580a4619aed829ac4d9536cd2fb681",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- SensorValue "
+      }
+    },
+    {
+      "table": "gnd_spgod.tblGood",
+      "field": "InterweavingID",
+      "original_table_document_token_count": 10097,
+      "field_record_start_token_position_1_based": 411,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "1a9a729bef6b57c2d0405c756cb045f211d4368fdb420456e3244b70884fd2e0",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- InterweavingID "
+      }
+    },
+    {
+      "table": "gnd_spgod.tblGood",
+      "field": "LotNumber",
+      "original_table_document_token_count": 10097,
+      "field_record_start_token_position_1_based": 1091,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "1a9a729bef6b57c2d0405c756cb045f211d4368fdb420456e3244b70884fd2e0",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- LotNumber "
+      }
+    },
+    {
+      "table": "gnd_hrpyr.tblWorkTime",
+      "field": "RemainedLeave",
+      "original_table_document_token_count": 1131,
+      "field_record_start_token_position_1_based": 974,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "7172e7956cb4dd042819db0e6cae0dcfc38d83c01dc12153a764064d3bcd16c4",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- RemainedLeave "
+      }
+    },
+    {
+      "table": "gnd_amspt.tblWorkOrder",
+      "field": "SuggestedExecutionDate",
+      "original_table_document_token_count": 1621,
+      "field_record_start_token_position_1_based": 502,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "9d46884ed012ec1873a86dc6672b4a77c0189d8b7751d7fb1034f7d24511437c",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- SuggestedExecutionDate "
+      }
+    },
+    {
+      "table": "gnd_firpd.tblBankGuaranty",
+      "field": "DepositValue",
+      "original_table_document_token_count": 1035,
+      "field_record_start_token_position_1_based": 276,
+      "effective_original_content_boundary": 254,
+      "falls_beyond_effective_original_embedding_boundary": true,
+      "source_evidence": {
+        "kind": "pre_result_original_document_tokenizer_verification",
+        "schema_document": "schema_extraction\\schema_documents.json",
+        "schema_document_sha256": "b13f6562daa87d3c2518ecc991943fee39d3e85d8e25957d48b65292c228046f",
+        "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+        "marker": "- DepositValue "
+      }
+    }
+  ]
+}
