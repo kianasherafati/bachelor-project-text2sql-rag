@@ -39,3 +39,7 @@ evaluation/alias_retrieval_comparison_results.json
 retrieval/business_alias_translation_queue.json
 evaluation/alias_bm25_retrieval_comparison_results.json
 evaluation/bm25_retrieval_comparison_results.json
+evaluation/chunked_protected_hashes_before.json
+evaluation/chunked_retrieval_comparison_results.json
+retrieval/chunked_schema_index_build_report.json
+retrieval/chunked_schema_metadata.json
