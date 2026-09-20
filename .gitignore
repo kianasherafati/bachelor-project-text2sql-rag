@@ -50,3 +50,5 @@ retrieval/bge_m3_schema_build_report.json
 retrieval/bge_m3_schema_metadata.json
 evaluation/bge_dense_graph_comparison_results.json
 evaluation/bge_dense_graph_protected_hashes_before.json
+evaluation/bge_dense_graph_comparison_results.json
+evaluation/bge_dense_graph_protected_hashes_before.json
