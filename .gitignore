@@ -52,3 +52,4 @@ evaluation/bge_dense_graph_comparison_results.json
 evaluation/bge_dense_graph_protected_hashes_before.json
 evaluation/bge_dense_graph_comparison_results.json
 evaluation/bge_dense_graph_protected_hashes_before.json
+evaluation/reranker_candidate_coverage_results.json
