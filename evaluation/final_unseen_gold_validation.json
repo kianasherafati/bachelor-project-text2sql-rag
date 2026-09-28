@@ -1,0 +1,2038 @@
+{
+  "case_count": 50,
+  "certified_gold_count": 50,
+  "current_human_decision_status": {
+    "closed_decision_local_sql_discrepancies": [],
+    "completed_replacement_ids": [
+      "FINAL-U14",
+      "FINAL-U17",
+      "FINAL-U22",
+      "FINAL-U29",
+      "FINAL-U33",
+      "FINAL-U38",
+      "FINAL-U45",
+      "FINAL-U49"
+    ],
+    "execution_blocker_ids": [],
+    "final_approved_ids": [
+      "FINAL-U01",
+      "FINAL-U02",
+      "FINAL-U03",
+      "FINAL-U04",
+      "FINAL-U05",
+      "FINAL-U06",
+      "FINAL-U07",
+      "FINAL-U08",
+      "FINAL-U09",
+      "FINAL-U10",
+      "FINAL-U11",
+      "FINAL-U12",
+      "FINAL-U13",
+      "FINAL-U14",
+      "FINAL-U15",
+      "FINAL-U16",
+      "FINAL-U17",
+      "FINAL-U18",
+      "FINAL-U19",
+      "FINAL-U20",
+      "FINAL-U21",
+      "FINAL-U22",
+      "FINAL-U23",
+      "FINAL-U24",
+      "FINAL-U25",
+      "FINAL-U26",
+      "FINAL-U27",
+      "FINAL-U28",
+      "FINAL-U29",
+      "FINAL-U30",
+      "FINAL-U31",
+      "FINAL-U32",
+      "FINAL-U33",
+      "FINAL-U34",
+      "FINAL-U35",
+      "FINAL-U36",
+      "FINAL-U37",
+      "FINAL-U38",
+      "FINAL-U39",
+      "FINAL-U40",
+      "FINAL-U41",
+      "FINAL-U42",
+      "FINAL-U43",
+      "FINAL-U44",
+      "FINAL-U45",
+      "FINAL-U46",
+      "FINAL-U47",
+      "FINAL-U48",
+      "FINAL-U49",
+      "FINAL-U50"
+    ],
+    "partial_ids": [],
+    "pending_human_decision_ids": [],
+    "pending_replacement_ids": [],
+    "replacement_decision_count": 8,
+    "replacement_human_review_pending": [],
+    "resolved_decision_ids": [
+      "FINAL-U01",
+      "FINAL-U02",
+      "FINAL-U03",
+      "FINAL-U04",
+      "FINAL-U05",
+      "FINAL-U06",
+      "FINAL-U07",
+      "FINAL-U08",
+      "FINAL-U09",
+      "FINAL-U10",
+      "FINAL-U11",
+      "FINAL-U12",
+      "FINAL-U13",
+      "FINAL-U14",
+      "FINAL-U15",
+      "FINAL-U16",
+      "FINAL-U17",
+      "FINAL-U18",
+      "FINAL-U19",
+      "FINAL-U20",
+      "FINAL-U21",
+      "FINAL-U22",
+      "FINAL-U23",
+      "FINAL-U24",
+      "FINAL-U25",
+      "FINAL-U26",
+      "FINAL-U27",
+      "FINAL-U28",
+      "FINAL-U29",
+      "FINAL-U30",
+      "FINAL-U31",
+      "FINAL-U32",
+      "FINAL-U33",
+      "FINAL-U34",
+      "FINAL-U35",
+      "FINAL-U36",
+      "FINAL-U37",
+      "FINAL-U38",
+      "FINAL-U39",
+      "FINAL-U40",
+      "FINAL-U41",
+      "FINAL-U42",
+      "FINAL-U43",
+      "FINAL-U44",
+      "FINAL-U45",
+      "FINAL-U46",
+      "FINAL-U47",
+      "FINAL-U48",
+      "FINAL-U49",
+      "FINAL-U50"
+    ],
+    "semantic_blocker_ids": []
+  },
+  "empty_count": 8,
+  "exact_counts_not_computed": true,
+  "executable_count": 50,
+  "expected_table_dependency_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+  "failed_count": 0,
+  "freeze_note": "All human, execution and dependency gates passed. Immutable identity is recorded in final_unseen_freeze_manifest.json; do not alter artifacts based on model outcomes.",
+  "freeze_ready": true,
+  "nonempty_count": 42,
+  "overall_expected_table_count_finalized": true,
+  "results": [
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_crsls.tblSalesAndServicesInvoice"
+      ],
+      "elapsed_seconds": 0.0453,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_crsls.tblSalesAndServicesInvoice"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U01",
+      "reference_sql_sha256": "fb892125697eced39b70dbbe8e4b88f7587708a7f054665c40cdc3fa972f56c4",
+      "result_columns": [
+        "InvoiceID",
+        "InvoiceNumber",
+        "InvoiceDate",
+        "AnnualSalesOrderNumber"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "APPROVE_AS_IS",
+      "semantic_note": "The query uses directly stored fields and explicit Gold joins without an additional business rule."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "elapsed_seconds": 0.0767,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U02",
+      "reference_sql_sha256": "15dcf6a22d246cfbf89427d4e4d0444889c77c538ccb0570328cb44d88ccf845",
+      "result_columns": [
+        "PurchaseOrderID",
+        "PurchaseOrderCode",
+        "PurchaseRequestID",
+        "PurchaseRequestCode",
+        "RequestLineID",
+        "GoodID",
+        "GoodName",
+        "RequestedQty",
+        "Description"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "APPROVE_AS_IS",
+      "semantic_note": "The query uses directly stored fields and explicit Gold joins without an additional business rule."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblGoodServiceRequest",
+        "gnd_scpch.tblGoodServiceRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "elapsed_seconds": 0.0977,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblGoodServiceRequest",
+        "gnd_scpch.tblGoodServiceRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U03",
+      "reference_sql_sha256": "3e04f1e98cabc8258251c017f7943f1adbca37112ac776da07209c8cff774276",
+      "result_columns": [
+        "RequestID",
+        "RequestCode",
+        "RequestedDate",
+        "EmployeeID",
+        "EmployeeCode",
+        "RequestLineID",
+        "GoodID",
+        "GoodName",
+        "RequestQty",
+        "QtyInQueue",
+        "RemainedQty"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Human rule: completion is Code=99 on GoodServiceRequest itself. Code is nullable and NULL rows exist. The existing fnGoodRequestInQueueFromGoodID explicitly uses ISNULL(gsr.Code,-1)<>99; that same NULL-inclusive non-completion rule is used without downstream status inference."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "elapsed_seconds": 0.1943,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_crsls.tblLoadingDetail",
+        "gnd_crsls.tblLoadingSerialDetail",
+        "gnd_scinv.tblSerial",
+        "gnd_scinv.tblTransportationCompanyDriverDetail",
+        "gnd_scprd.tblPacking",
+        "gnd_scprd.tblRawMaterialPacking",
+        "gnd_scprd.tblWastePacking"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U04",
+      "reference_sql_sha256": "daee7eaa682db0b37a36e70a3a44ce62bdfce5add9e4d826da43d6788027b699",
+      "result_columns": [
+        "LoadingID",
+        "Code",
+        "DoneDate",
+        "DriverRecordID",
+        "DriverName",
+        "TotalNetCargoWeight"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Use COALESCE(CargoTotalNetWeight,TotalNetWeight): stored cargo weight when present, computed total net weight when NULL. Same-day @ReportDate range; driver via TransportationCompanyDriverIG. Explicit latest human decision supersedes the former no-fallback interpretation."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_crsls.tblSalesOrder",
+        "gnd_crsls.tblSalesOrderDetail",
+        "gnd_crsls.tblSalesOrderWasteDetail"
+      ],
+      "elapsed_seconds": 0.0772,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_crsls.tblSalesOrder",
+        "gnd_crsls.tblSalesOrderDetail",
+        "gnd_crsls.tblSalesOrderWasteDetail"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U05",
+      "reference_sql_sha256": "afd570ad25bcee221634023d70a91d254a20ecea0b7089d1a146f0a81995ee56",
+      "result_columns": [
+        "SalesOrderID",
+        "Code",
+        "OrderDate",
+        "AnnualSalesOrderNumber",
+        "DeliveryDate",
+        "DeliveryToCustomerID"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Human rule: NULL HasShipped means unshipped. DeliveryDate reproduces the existing helper branch (OrderTypeID=1267: maximum detail delivery date; otherwise maximum waste-detail delivery date) but omits its GETDATE fallback. Missing delivery dates remain NULL."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblInventory",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_scpch.tblPurchaseInvoiceSeparatedEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "elapsed_seconds": 0.1114,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblInventory",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_scpch.tblPurchaseInvoiceSeparatedEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U06",
+      "reference_sql_sha256": "550340685a0b9d5bebbac93fbf1e888feea6f4299f86155d2b1762b5ad7c29a3",
+      "result_columns": [
+        "PurchaseInvoiceID",
+        "PurchaseInvoiceCode",
+        "ReceiptID",
+        "InvoiceLineID",
+        "InventoryID",
+        "InventoryName",
+        "GoodID",
+        "GoodCode",
+        "GoodName",
+        "Qty",
+        "AccValue"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "QUESTION_AND_GOLD_FIX",
+      "semantic_note": "Source-linked report definition proves invoice -> separated receipt (FormTypeID 1513618) -> warehouse receipt (27887). Invoice.FormID alone is not a receipt ID. Preserve the report grain: invoice goods line alongside each linked receipt, not an asserted receipt-detail allocation."
+    },
+    {
+      "bounded_rows_fetched": 0,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblEmployeeShiftAdditionalOffDates",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "elapsed_seconds": 0.0904,
+      "empty": true,
+      "empty_cause_classification": "EMPTY_SOURCE_TABLE",
+      "empty_cause_note": "AdditionalOffDates is empty; coverage of all off days remains a separate semantic decision.",
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblEmployeeShiftAdditionalOffDates",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U07",
+      "reference_sql_sha256": "f9aa23988fce7f15b94523e990ce6da2ef3b23d3e96e8272e60538828ba7467c",
+      "result_columns": [
+        "EmployeeID",
+        "EmployeeCode",
+        "YearMonthID",
+        "Year",
+        "MonthID",
+        "AdditionalOffDateCount"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "INSUFFICIENT_EVIDENCE_STOP",
+      "semantic_note": "Human decision confirms explicitly recorded additional off dates only; ordinary roster off days are excluded. Existing SQL is unchanged. An empty source table is retained as a valid empty result."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblDepartment",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_egwfm.tblWorkRoute",
+        "gnd_hrcio.tblEmployeeExitPermission",
+        "gnu_hrcio.xblEmployeeExitPermission"
+      ],
+      "elapsed_seconds": 0.2715,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblDepartment",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_egwfm.tblWorkRoute",
+        "gnd_hrcio.tblEmployeeExitPermission",
+        "gnu_hrcio.xblEmployeeExitPermission"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U08",
+      "reference_sql_sha256": "604ebc6955c98a63cb74cedf0247c40d7adcfe5e551f54a9fd48510ea5a079ea",
+      "result_columns": [
+        "DepartmentID",
+        "DepartmentName",
+        "ExitReason",
+        "WorkflowStatusID",
+        "WorkflowStatus",
+        "PermitCount",
+        "AverageElapsedMinutes"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "CLOSED authoritative rule implemented: initial registration is xblEmployeeExitPermission.CreateDate. Final approval is MAX WorkRoute.LastPlaceChangeDate at a ProcessStep named End, across every matching permit-form route and process. Status grouping retains the previous latest-task convention only for the status label; it never determines approval. Never-approved permits remain in counts and contribute NULL to AVG. RunStatusTypeID=3 alone is not approval."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "elapsed_seconds": 0.0939,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U09",
+      "reference_sql_sha256": "8400173e2f80bfce68cd2b38a9f712be90c04b89f654744390c3515fdf482786",
+      "result_columns": [
+        "ModificationID",
+        "EmployeeID",
+        "EmployeeCode",
+        "ModificationDate",
+        "PreviousShiftID",
+        "PreviousShift",
+        "NewShiftID",
+        "NewShift",
+        "DescriptionUpdated"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "CLOSED authoritative rule implemented: modification.ShiftID is the new daily override. Previous effective shift comes from the greatest eligible base-assignment FromDate on that same date, with EndDateStatus eligibility and CurrentStatusTypeID NOT IN (4,6). DISTINCT collapses identical ShiftIDs tied at that date; the authoritative diagnostic found no different ShiftIDs among such ties. No LAG, prior-day substitution, or ID ordering is used."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "elapsed_seconds": 0.1941,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U10",
+      "reference_sql_sha256": "540fad5bf7d1f9eeccd1ba50dde99b4a15f51ba47dd8638649c045f829742580",
+      "result_columns": [
+        "WorkTimeID",
+        "EmployeeID",
+        "EmployeeCode",
+        "YearMonthID",
+        "WorkHours",
+        "NonWorkHours",
+        "RegularOvertimeHours",
+        "LeaveDays",
+        "LeaveHours",
+        "MissionDays",
+        "MissionHours"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Monthly WorkTime facts are authoritative. Non-work is stored shortfall (SaatKasrKarcdur); overtime is the stored regular overtime component. Duration fields are minutes, divided by 60.0; AnnualLeave and TedadRuzMamuriat are days. Month parameters are monthly YearMonth IDs, ordered by calendar dates, not numeric IDs. No event recomputation or proration."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrfod.tblEmployeeFood",
+        "gnd_hrfod.tblEmployeeFoodDelivery",
+        "gnd_hrfod.tblEmployeeFoodRequest",
+        "gnd_hrfod.tblEmployeeFoodRequestDetail",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "elapsed_seconds": 0.2552,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrfod.tblEmployeeFood",
+        "gnd_hrfod.tblEmployeeFoodDelivery",
+        "gnd_hrfod.tblEmployeeFoodRequest",
+        "gnd_hrfod.tblEmployeeFoodRequestDetail",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U11",
+      "reference_sql_sha256": "f250bf5b05909a4636ace031b1bf3c15a0c9aa790f21feed1a0f26fe00266ed8",
+      "result_columns": [
+        "EmployeeID",
+        "EmployeeCode",
+        "YearMonthID",
+        "RecordedMealEntitlement",
+        "RequestedMealQuantity",
+        "DeliveredMealCount",
+        "RemainingEntitlement"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Active FoodCount credits are additive per employee/payroll month. Requests and delivered meals are independently aggregated over the same nonoverlapping monthly YearMonth dates; each total joins once. Remaining = credits minus delivered rows. Months without credits are outside the entitlement-led report."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblCofferMembership",
+        "gnd_hrpyr.tblEmployeeLoanRequest"
+      ],
+      "elapsed_seconds": 0.0693,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblCofferMembership",
+        "gnd_hrpyr.tblEmployeeLoanRequest"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U12",
+      "reference_sql_sha256": "6aeb3df77010a6c6c292c3b0e33064d86b5d29b4034d56d69d7011e665b370a5",
+      "result_columns": [
+        "LoanRequestID",
+        "EmployeeID",
+        "EmployeeCode",
+        "RequestDate",
+        "StoredPortionValue",
+        "StoredMaximumLoanAmount",
+        "MembershipID",
+        "LatestRecordedFundBalance",
+        "BalanceEffectiveFrom"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "INSUFFICIENT_EVIDENCE_STOP",
+      "semantic_note": "Stored UpperLoanAmount is the authoritative maximum; PortionValue remains stored. Additional balance is latest dated CofferMembership row valid at @AsOfDate, ordered FromDate DESC, ID DESC; it never recalculates the ceiling."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblPacking",
+        "gnd_spgod.tblQualityType",
+        "gnd_spgod.tblSpinningCountType",
+        "gnd_spgod.tblSpinningSystemType",
+        "gnd_spgod.tblYarnType"
+      ],
+      "elapsed_seconds": 0.2973,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblPacking",
+        "gnd_spgod.tblQualityType",
+        "gnd_spgod.tblSpinningCountType",
+        "gnd_spgod.tblSpinningSystemType",
+        "gnd_spgod.tblYarnType"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U13",
+      "reference_sql_sha256": "3c034d19b3545b62e6bf3f0b84408ac588a5ecc7cf1a5459833a1871e7637305",
+      "result_columns": [
+        "InterweavingID",
+        "InterweavingCode",
+        "YarnType",
+        "SpinningSystem",
+        "Quality",
+        "SpinningCount",
+        "TotalPackedNetWeight"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "APPROVE_AS_IS",
+      "semantic_note": "Production quantity is the sum of stored Packing.NetWeight."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblSpindleLable",
+        "gnd_spgod.tblSpinningSystemType"
+      ],
+      "elapsed_seconds": 0.0839,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblSpindleLable",
+        "gnd_spgod.tblSpinningSystemType"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U14",
+      "reference_sql_sha256": "1bbb4ae4b371c1f99719b14089d03dbc34b2739d7f9fcf639dc5613accbd95c7",
+      "result_columns": [
+        "BobbinLabelID",
+        "InterweavingID",
+        "InterweavingCode",
+        "SpinningSystemName"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "One row per stored bobbin-label record, not per generated printed label. The spinning-system name is its stored Persian display name; no translation or machine-name substitution. UI editability and mandatory-entry changes are outside the extracted reporting need."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "elapsed_seconds": 0.1178,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U15",
+      "reference_sql_sha256": "f285e15793d67460036086bc8cea2db80eabd66447648bbefb808c1c5bac7f4f",
+      "result_columns": [
+        "QualityControlID",
+        "Code",
+        "DoneDate",
+        "QualityControlLineID",
+        "GoodID",
+        "GoodCode",
+        "GoodName",
+        "Qty",
+        "NotifiQTY",
+        "CQty"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Authoritative non-asset scope: GoodGroupID 1487/1488/1489/1490. Direct invoice FormTypeID=1684173/FormID=QualityControl.ID is sufficient. No broad GoodType or packaging-supply category is substituted."
+    },
+    {
+      "bounded_rows_fetched": 0,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblWorkOrder"
+      ],
+      "elapsed_seconds": 0.121,
+      "empty": true,
+      "empty_cause_classification": "NO_MATCHING_ROWS_FOR_VALID_FILTER",
+      "empty_cause_note": "No WorkOrder has NULL ResponsibleEmployeeID. This is a valid empty result for the literal filter, not proof that it implements business assignment or recurrence semantics.",
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblWorkOrder"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U16",
+      "reference_sql_sha256": "6b093f6f50d5c75c30b719a28be0beaddbbbaaf95e66f5d011685c061c2c6a3f",
+      "result_columns": [
+        "WorkOrderID",
+        "Code",
+        "WorkOrderTitle",
+        "SuggestedExecutionDate",
+        "EquipmentID",
+        "EquipmentName",
+        "RoutineID",
+        "RoutineName"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "INSUFFICIENT_EVIDENCE_STOP",
+      "semantic_note": "Human-approved unassigned criterion is solely ResponsibleEmployeeID IS NULL; no scheduling, recurrence, team, contractor or due-date condition."
+    },
+    {
+      "bounded_rows_fetched": 1,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblRoutineCovered"
+      ],
+      "elapsed_seconds": 0.0964,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblRoutineCovered"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U17",
+      "reference_sql_sha256": "e55a93486193262181174c797695b56c03cd418e8133753964a0b04d3e09aad9",
+      "result_columns": [
+        "RoutineID",
+        "RoutineName",
+        "CoverageLineID",
+        "CoveredRoutineID",
+        "CoveredRoutineName"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Overlapping means the explicitly stored coverage relation labelled Covered Routine in ERP metadata. It does not mean calculated time overlap or simultaneous/prerequisite routines. One row per coverage-detail IG. @RoutineID replaces source-specific activity identifiers."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "elapsed_seconds": 0.0708,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U18",
+      "reference_sql_sha256": "4f71aab2c213db53e3182aaaee69c713122add2a423d585ac4bd4dfc13a23064",
+      "result_columns": [
+        "PayRequestID",
+        "Code",
+        "PayRequestDate",
+        "RequestedExecutionDate",
+        "PayRequestLineID",
+        "Sequence",
+        "Amount",
+        "LineDescription",
+        "PayDate"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Human decision limits the report to request plus request-detail grain, one result row per request detail. The date range filters PayRequestDate. RequestedExecutionDate is the requested header date, not an executed payment. No PayRequestPayment dependency or payment execution fields remain."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_firpd.tblBankInput",
+        "gnd_firpd.tblBankInputDetail"
+      ],
+      "elapsed_seconds": 0.056,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_firpd.tblBankInput",
+        "gnd_firpd.tblBankInputDetail"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U19",
+      "reference_sql_sha256": "cc5a49aa598dba9dd34214f75314b6f36bb78ddef46c05ca89a6ff1cb43dda1c",
+      "result_columns": [
+        "BankReceiptID",
+        "Code",
+        "DoneDate",
+        "ReceiptAmount",
+        "AccountingLineID",
+        "Sequence",
+        "AccountID",
+        "AccountCode",
+        "AccountName",
+        "LineAmount",
+        "LineDescription",
+        "TransDetail"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "APPROVE_AS_IS",
+      "semantic_note": "The query uses directly stored fields and explicit Gold joins without an additional business rule."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail"
+      ],
+      "elapsed_seconds": 0.3399,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U20",
+      "reference_sql_sha256": "e99a4852f7947ae7626950a81e813bd6d592797dd84597ce7db2242c9366a79c",
+      "result_columns": [
+        "TransactionID",
+        "TransactionCode",
+        "DocDate",
+        "JournalLineID",
+        "RowNumber",
+        "AccountID",
+        "AccountCode",
+        "AccountName",
+        "Description",
+        "Debit",
+        "Credit"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "APPROVE_AS_IS",
+      "semantic_note": "The selected accounting detail entity is supplied by FormTypeID and FormID parameters."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_pjprj.tblProject",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService"
+      ],
+      "elapsed_seconds": 0.0525,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_pjprj.tblProject",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U21",
+      "reference_sql_sha256": "c0d348d41911d941f0ccb3796b90bac228aef484ebca5b536f80dc4629b52898",
+      "result_columns": [
+        "ProjectID",
+        "ProjectName",
+        "PurchaseInvoiceID",
+        "PurchaseInvoiceCode",
+        "InvoiceDate",
+        "SupplierID",
+        "TotalPayable"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "INSUFFICIENT_EVIDENCE_STOP",
+      "semantic_note": "Human decision confirms goods/services purchase invoices only, using their explicit CredbProjectID relationship. Existing SQL is unchanged."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblChatLastSeen"
+      ],
+      "elapsed_seconds": 0.0571,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblChatLastSeen"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U22",
+      "reference_sql_sha256": "ff2ec21e6bbb26428ee968882780b134d6480b6b1b9c09ea584121f2943b435f",
+      "result_columns": [
+        "UserID",
+        "LastSeenAt"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "UserID identifies the user without outputting a username or personal name. MAX(LastSeenDate) gives the latest stored chat timestamp if more than one row exists. This is not a claim of current online presence, room-specific attendance, or message reading."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblRole",
+        "gnd_egbse.tblRoleDomain",
+        "gnd_egbse.tblRoleSystem",
+        "gnd_egbse.tblRoleSystemForm",
+        "gnd_egbse.tblRoleSystemReport",
+        "gnd_egfrm.tblFormType",
+        "gnd_egrpt.tblReport",
+        "gnd_egsys.tblCaption",
+        "gnd_egsys.tblSystem"
+      ],
+      "elapsed_seconds": 0.0938,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblRole",
+        "gnd_egbse.tblRoleDomain",
+        "gnd_egbse.tblRoleSystem",
+        "gnd_egbse.tblRoleSystemForm",
+        "gnd_egbse.tblRoleSystemReport",
+        "gnd_egfrm.tblFormType",
+        "gnd_egrpt.tblReport",
+        "gnd_egsys.tblCaption",
+        "gnd_egsys.tblSystem"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U23",
+      "reference_sql_sha256": "2c0e782e3df5a20c891df702ad1f1aa909b5e7ee29abae051c3ab8cb4754fd04",
+      "result_columns": [
+        "RoleID",
+        "RoleName",
+        "SystemID",
+        "SystemName",
+        "ContentType",
+        "ContentID",
+        "ContentName",
+        "GrantDisplay",
+        "GrantEdit"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "APPROVE_AS_IS",
+      "semantic_note": "Forms and reports are combined into one permission-shaped result with UNION ALL."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_ofsct.tblInternalLetter"
+      ],
+      "elapsed_seconds": 0.1995,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_ofsct.tblInternalLetter"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U24",
+      "reference_sql_sha256": "90913ea51a9d84d6ee5f7337d8dc3419b51962769d9fe8f0638b99ef374d3206",
+      "result_columns": [
+        "InternalLetterID",
+        "Code",
+        "Date",
+        "Subject",
+        "CurrentProcessStepID",
+        "CurrentWorkflowStep",
+        "RunStatusTypeID",
+        "WorkflowRunStatus"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Sequential workflow is human-authorized. Latest task is greatest Work.ID, consistent with ERP task ordering and the last-step helper, without timestamp ranking. FormTypeID=501 identifies InternalLetter."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_scinv.tblGoodConsume",
+        "gnd_scinv.tblGoodConsumeDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "elapsed_seconds": 0.0928,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_scinv.tblGoodConsume",
+        "gnd_scinv.tblGoodConsumeDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U25",
+      "reference_sql_sha256": "20f072258c61d3d21794b2c46673fff17ab9146e21ebe6fe943c527f34376ce3",
+      "result_columns": [
+        "GoodID",
+        "ItemDescription",
+        "RequesterEmployeeID",
+        "OccurrenceCount",
+        "TotalConsumedQuantity"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Duplicate key is GoodID plus RequesterEmployeeID, not description or asset. Each GoodConsumeDetail row is one occurrence. COUNT_BIG(*) counts occurrences; SUM(Qty) preserves recorded quantities."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblFeedback",
+        "gnd_amspt.tblWorkOrder",
+        "gnd_egwfm.tblWorkRoute"
+      ],
+      "elapsed_seconds": 0.0738,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblFeedback",
+        "gnd_amspt.tblWorkOrder",
+        "gnd_egwfm.tblWorkRoute"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U26",
+      "reference_sql_sha256": "ef78725988783bcc17bcf2d517b0ce93583edcecc47a70960044da781191e52d",
+      "result_columns": [
+        "FeedbackID",
+        "WorkOrderID",
+        "WorkOrderCode",
+        "EquipmentID",
+        "EquipmentName",
+        "FeedbackDate",
+        "AmountOfWork",
+        "HasContinued"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "INSUFFICIENT_EVIDENCE_STOP",
+      "semantic_note": "Human-approved continuation proof is EXISTS WorkRoute with feedback FormTypeID=1136748 and FormID=feedback.ID. Any current status is permitted; route existence proves Continue at least once."
+    },
+    {
+      "bounded_rows_fetched": 0,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egfrm.tblFormEquivalency",
+        "gnd_fiaci.tblAccountDetail",
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail",
+        "gnd_firpd.tblInputChequeBankReceive"
+      ],
+      "elapsed_seconds": 0.8222,
+      "empty": true,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egfrm.tblFormEquivalency",
+        "gnd_fiaci.tblAccountDetail",
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail",
+        "gnd_firpd.tblInputChequeBankReceive"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U27",
+      "reference_sql_sha256": "a822a68096ff9339775dcf073c0fa63b6ca69d334ff9bf4c1f3ead3ef4297cc0",
+      "result_columns": [
+        "CollectionID",
+        "CollectionCode",
+        "CollectionDate",
+        "TransID",
+        "TransDetailIG",
+        "AccountID",
+        "MissingAnalyticFormTypeID"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Required analytic types come from AccountDetail. Supplied types are matched through FormEquivalency using the ERP spMonitorMissingDetailDetail NOT EXISTS pattern. Cheque-collection form type 12413 is explicitly mapped in ERP metadata and used by the auto-accounting caller. Source-document identity uses either the journal header or explicit journal-line reference. Each output row is one missing required type on one accounting line; no bank-account NULL shortcut."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "elapsed_seconds": 0.057,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U28",
+      "reference_sql_sha256": "35e856d82a10a7665e507a8980416bac7ffbb4e8e0eb6ce5cecc12263f780662",
+      "result_columns": [
+        "PayRequestID",
+        "Code",
+        "PayRequestDate",
+        "PayContactID",
+        "Counterparty",
+        "DestinationDescription",
+        "PayRequestLineID",
+        "Sequence",
+        "LineDescription",
+        "Amount"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "APPROVE_AS_IS",
+      "semantic_note": "The query uses directly stored fields and explicit Gold joins without an additional business rule."
+    },
+    {
+      "bounded_rows_fetched": 0,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_firpd.tblInputCheque"
+      ],
+      "elapsed_seconds": 0.1971,
+      "empty": true,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_firpd.tblInputCheque"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U29",
+      "reference_sql_sha256": "0fcfa0c895f3ffc7642e42c33270d643fba8f9fcc8ae205cea1e0252e9da905c",
+      "result_columns": [
+        "InputChequeID",
+        "ChequeNumber",
+        "ReceiptDate",
+        "DuplicateCount"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "DoneDate is the receipt date, as confirmed by the ERP cheque report; ExecuteDate is the due date. Duplicate equality follows stored ChequeNumber and database collation, with no invented bank/account key or string normalization. Empty results are valid after data correction."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_crsls.tblLoadingScannedBarcode",
+        "gnd_pjprj.tblInterweaving"
+      ],
+      "elapsed_seconds": 0.3967,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_crsls.tblLoadingScannedBarcode",
+        "gnd_pjprj.tblInterweaving"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U30",
+      "reference_sql_sha256": "64de50e2e3506f7db429721e20a29617a411053f92ae9c7c406dbf8400aa3657",
+      "result_columns": [
+        "LoadingID",
+        "LoadingCode",
+        "DoneDate",
+        "ScannedBarcodeID",
+        "Barcode",
+        "Serial",
+        "InterweavingID",
+        "InterweavingCode",
+        "NetWeight",
+        "InterweavingTotalScannedWeight"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "APPROVE_AS_IS",
+      "semantic_note": "The query uses directly stored fields and explicit Gold joins without an additional business rule."
+    },
+    {
+      "bounded_rows_fetched": 3,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_fiaci.tblPeriodSpec",
+        "gnd_scinv.tblInventory",
+        "gnd_scinv.vwEnter",
+        "gnd_scinv.vwExit",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "elapsed_seconds": 0.3814,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_fiaci.tblPeriodSpec",
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblEnterDetail",
+        "gnd_scinv.tblExit",
+        "gnd_scinv.tblExitDetail",
+        "gnd_scinv.tblInventory",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood",
+        "gnu_scinv.xblEnter",
+        "gnu_scinv.xblExit"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U31",
+      "reference_sql_sha256": "0e73d7eafe47012fdb1770ebbd40e0d94bbcc6eb3ff56bb43eda5b89b3132d75",
+      "result_columns": [
+        "GoodID",
+        "GoodCode",
+        "GoodName",
+        "InventoryID",
+        "InventoryName",
+        "EnteredQuantity",
+        "ExitedQuantity",
+        "RemainingQuantity"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Stock/existence, not kardex. Purchase request selects distinct goods; its date is not a stock boundary. Mirrors spGoodExistance: Code IS NOT NULL, movement-date fiscal period, creator company, EnterQty minus ExitQty. An out-of-period or NULL end date uses the selected period end, as in the ERP procedure. Includes all inventories with eligible movements for the selected goods; no user-access predicate is copied. CreatorCompanyID requires physical gnu_scinv.xblEnter/xblExit dependencies outside the frozen retrieval corpus; they are retained honestly."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "elapsed_seconds": 0.1404,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblEnterDetail",
+        "gnd_scinv.tblInventory",
+        "gnd_spgod.tblGood"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U32",
+      "reference_sql_sha256": "b6df289a7405b74bb5c4e746dc5decb62e0e47a528791c9c67ba9268eda71892",
+      "result_columns": [
+        "WarehouseReceiptID",
+        "ReceiptCode",
+        "ReceiptDate",
+        "InventoryID",
+        "InventoryName",
+        "ReceiptLineID",
+        "GoodID",
+        "GoodCode",
+        "GoodDescription",
+        "Qty",
+        "AccValue",
+        "SupplierID",
+        "SupplierName"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "One row per warehouse receipt line. Receipt date from Enter.DoneDate; quantity and amount from EnterDetail.Qty/AccValue; supplier from Enter.CredbRelatedToPersonID -> Contact.ID. Latest human decision supersedes invoice-line interpretation."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egwfm.tblWorkEnd"
+      ],
+      "elapsed_seconds": 0.1121,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egwfm.tblWorkEnd"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U33",
+      "reference_sql_sha256": "126b3b03adc21d49d6d2f1e8602b136c318bd5368ed3514668a5611f5dfb137e",
+      "result_columns": [
+        "WorkID",
+        "CompletedAt"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "DoneStatusTypeL ID=1 explicitly means Done. WorkEnd.CreateDate is written at the end action, and the ID primary key gives one stored end row per task. A half-open calendar-day filter includes every time on @ReportDate; the relative source date is parameterized. Unrequested originating-form identifiers and completion comments were removed during wording review. This is the normalized stored-Done information need, not a claim to reproduce every undocumented column or status of the original application report. Final human approval of the normalized case remains pending."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork"
+      ],
+      "elapsed_seconds": 0.19,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U34",
+      "reference_sql_sha256": "f3af8041213a3e324bb90538ac7c268c344511d6c53a0f2a8e162374f4e3328a",
+      "result_columns": [
+        "WorkID",
+        "FormTypeID",
+        "FormID",
+        "AssignedDate",
+        "CurrentUserID",
+        "CurrentAssignee",
+        "CurrentProcessStepID",
+        "CurrentStep",
+        "RunStatusTypeID",
+        "RunStatus"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Every stored Work with RunStatusTypeID IN (0,1) is a current running assignment, matching vwRunningWorks. Parallel rows are preserved. LastPlaceChangeDate is the current assignment arrival timestamp; CurrentUserID joins Contact directly and may remain NULL for role/position/team assignments."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_ofsct.tblInternalLetter",
+        "gnd_ofsct.tblRecEmpInternalLetter"
+      ],
+      "elapsed_seconds": 0.0909,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_ofsct.tblInternalLetter",
+        "gnd_ofsct.tblRecEmpInternalLetter"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U35",
+      "reference_sql_sha256": "48cb7f0161a71679982c01bfdef7fe124d9e30af3be3602a5891d9526d285915",
+      "result_columns": [
+        "InternalLetterID",
+        "Code",
+        "SentDate",
+        "Subject",
+        "SenderID",
+        "Sender",
+        "RecipientID",
+        "Recipient",
+        "IsMainRecipient"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Human decision requests sent date only. InternalLetter.Date supplies SentDate; no time-of-day or workflow timestamp is inferred."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "elapsed_seconds": 0.0532,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U36",
+      "reference_sql_sha256": "6bfd1babddd0e70811b95c1506482e7d98ef918370af5f93cf2eba290b078dcb",
+      "result_columns": [
+        "WorkTimeID",
+        "EmployeeID",
+        "EmployeeCode",
+        "YearMonthID",
+        "Year",
+        "MonthID",
+        "HolidayDayCount",
+        "RegularOvertimeHours",
+        "FridayOvertimeHours"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Human decision confirms Employee.EmployeeCode. SaatEzafeKarcdur and SaatJomehKaricdur store minutes; divide by 60.0 for Hours outputs. HolidayDayCount remains the stored day count."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblConvertDateTypeL",
+        "gnd_egbse.tblYearMonth",
+        "gnd_egsys.tblSystemConfig",
+        "gnd_egsys.tblSystemConfigDetail",
+        "gnd_hrcio.tblAttendenceRules",
+        "gnd_hrcio.tblCalendarHolidays",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblEmployeeLeave",
+        "gnd_hrcio.tblEmployeeSavedLeave",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblShift",
+        "gnd_hrcio.tblShiftDetail",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblShiftTemplateDetail",
+        "gnd_hrcio.uvEmployeeShift",
+        "gnd_hrcio.vwEmployeeShiftCompleteReport",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrprs.tblEmployeeEmploymentStatus",
+        "gnd_hrprs.tblEmployeeIncentive"
+      ],
+      "elapsed_seconds": 43.973,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblConvertDateTypeL",
+        "gnd_egbse.tblPersonStatus",
+        "gnd_egbse.tblPosition",
+        "gnd_egbse.tblSecurityConfig",
+        "gnd_egbse.tblUnit",
+        "gnd_egbse.tblUser",
+        "gnd_egbse.tblYearMonth",
+        "gnd_egsys.tblSystemConfig",
+        "gnd_egsys.tblSystemConfigDetail",
+        "gnd_hrcio.tblAttendenceRules",
+        "gnd_hrcio.tblCalendarHolidays",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblEmployeeLeave",
+        "gnd_hrcio.tblEmployeeSavedLeave",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShift",
+        "gnd_hrcio.tblShiftDetail",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblShiftTemplateDetail",
+        "gnd_hrcio.tblWorkShiftType",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrprs.tblEmployeeEmploymentStatus",
+        "gnd_hrprs.tblEmployeeIncentive",
+        "gnu_hrcio.xblEmployeeShift"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U37",
+      "reference_sql_sha256": "eb2e14d85b9057e5413e7012facac99768b6ec3e990212223f77feb189cce714",
+      "result_columns": [
+        "EmployeeID",
+        "MonthlyRemainingLeaveMinutes",
+        "AnnualRemainingLeaveMinutes"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "SELECT-only transcription of the authoritative leave-request and annual-cap calculations. Approved daily leave takes precedence at employee/date grain, including zero daily consumption; hourly contribution on that date is suppressed. All otherwise-valid clock events across CardCode values form one employee/day stream. The existing fnLeaveCalc effective-clock ordering and pairing are retained; CardCode neither splits the pivot nor selects a result. Configuration, employment proration, holiday adjustments, carry-forward and annual-cap incentives are retained. Both human clarifications are implemented; bounded execution and private regressions passed."
+    },
+    {
+      "bounded_rows_fetched": 0,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrapr.tblManagerHRFeedback",
+        "gnd_hrapr.tblManagerHRFeedbackLeavedEmployeeDetail"
+      ],
+      "elapsed_seconds": 0.1198,
+      "empty": true,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrapr.tblManagerHRFeedback",
+        "gnd_hrapr.tblManagerHRFeedbackLeavedEmployeeDetail"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U38",
+      "reference_sql_sha256": "9ec714021d19b102ab259bd2f7e78d14a7f37de9a4dc7abe4f3de86ff344d8f5",
+      "result_columns": [
+        "EvaluationID",
+        "UnitID",
+        "EmployeeID",
+        "HireDate",
+        "TerminationDate"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "One row per recorded departed-employee detail in the selected HR evaluation, restricted to its stored payroll-period boundaries. @EvaluationID must identify an evaluation covering three payroll months. Hire and termination dates are the recorded detail fields populated by the ERP HR-evaluation procedure. The independently requested active-employee score recalculation is outside this atomic departed-employee reporting requirement. No live shift attribution is invented."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblLegalPosition",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "elapsed_seconds": 0.2373,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblLegalPosition",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U39",
+      "reference_sql_sha256": "93583b80a473c7f60ae2331f96ae2fced176d4c06b2dd4edd9562b7f3d365c96",
+      "result_columns": [
+        "YearMonthID",
+        "LegalPositionID",
+        "ApprovedPosition",
+        "EmployeeCount",
+        "TotalWorkHours",
+        "TotalRegularOvertimeHours"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Uses the exact interval eligibility and FromDate DESC, ID DESC ordering of spEmployeeWorkTimeReportNew contract selection, separately for each payroll month. One contract result per WorkTime row; no splitting or multiplication. Missing assignment is retained as NULL. Stored minutes divided by 60.0."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblJobGroup",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "elapsed_seconds": 0.2107,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblJobGroup",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U40",
+      "reference_sql_sha256": "39547e783f1368cfad349728b774f31b76fa01f440718b04c4bc63ce4455ea74",
+      "result_columns": [
+        "JobGroupID",
+        "PersonnelGroup",
+        "EmployeeCount",
+        "TotalWorkHours",
+        "TotalRegularOvertimeHours",
+        "TotalLeaveHours"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Complete monthly facts only; no daily proration. Effective contract interval/order follows spEmployeeWorkTimeReportNew. OUTER APPLY returns at most one assignment, retaining unmatched facts under NULL group. Duration fields are stored minutes, divided by 60.0."
+    },
+    {
+      "bounded_rows_fetched": 0,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblWorkTimeAllDays",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "elapsed_seconds": 0.112,
+      "empty": true,
+      "empty_cause_classification": "EMPTY_SOURCE_TABLE",
+      "empty_cause_note": "WorkTimeAllDays is empty; a real employee and the frozen-date payroll month exist.",
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblWorkTimeAllDays",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U41",
+      "reference_sql_sha256": "3e3fb261ac331a1675b751991a6a871df6d7587d5bb66d5351b7e054ee9d5d4c",
+      "result_columns": [
+        "EmployeeID",
+        "EmployeeCode",
+        "Date",
+        "WorkTime",
+        "NotWorkTime",
+        "TotalAdditionalTime",
+        "LeaveHours",
+        "HourMission",
+        "AttendanceEventID",
+        "ClockTime",
+        "AlternateClockTime",
+        "EnterExitTypeID"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "QUESTION_AND_GOLD_FIX",
+      "semantic_note": "Source explicitly requires the current month. Replace server clock with @AsOfDate and freeze the validation date; select an existing employee privately rather than invalid sentinel 0. Daily values repeat per attendance event intentionally and are not aggregated."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "elapsed_seconds": 0.1667,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egwfm.tblWork",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblForgottenEnterExit",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U42",
+      "reference_sql_sha256": "8f210fb963a6e33c900e7bd32447830d5b16a60dab6d9d93b4c5f55009926323",
+      "result_columns": [
+        "ForgottenAttendanceID",
+        "EmployeeID",
+        "EmployeeCode",
+        "DayDate",
+        "ClockTime",
+        "PermissionTypeID"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Authoritative benchmark rule: latest Work for FormTypeID=1389122/FormID by CreateDate DESC, ID DESC must have RunStatusTypeID=3. Not reflected means NOT EXISTS any CardLog with that source FormTypeID/FormID, independent of IsDisable. One row per qualifying forgotten-attendance request."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.vwEmployeeShiftCompleteReport",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "elapsed_seconds": 66.0234,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShift",
+        "gnd_hrcio.tblShiftDetail",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblWorkShiftType",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U43",
+      "reference_sql_sha256": "260d01115c61e787037015c5ea80d8b2f451d64914546a3c375012e68d91b0ff",
+      "result_columns": [
+        "EmployeeID",
+        "EmployeeCode",
+        "YearMonthID",
+        "ShiftWorkDayCount"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Human-authorized qualification: vwEmployeeShiftCompleteReport row with IsOff=0 plus same EmployeeID/date CardLog.IsDisable=0. COUNT(DISTINCT Date), not roster-only eligibility. Monthly YearMonth date ranges are verified nonoverlapping. The view dependency closure is retained."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "elapsed_seconds": 0.048,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U44",
+      "reference_sql_sha256": "e34645469d49544b6aa348bee3c33414b2f3ff8cc48f941f2f491f149d6f002e",
+      "result_columns": [
+        "EmployeeID",
+        "EmployeeCode",
+        "YearMonthID",
+        "Year",
+        "MonthID",
+        "UnroundedRegularOvertimeHours",
+        "UnroundedHolidayOvertimeHours"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Human decision confirms unrounded system overtime fields SystemSaatEzafeKarcdur and SystemSaatEzafekarTatilicdur, stored in minutes. Divide by 60.0 without rounding; payroll overtime fields are not substitutes."
+    },
+    {
+      "bounded_rows_fetched": 0,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_ficac.tblProjectStandardProduction",
+        "gnd_ficac.tblProjectStandardProductionScannedBarcode",
+        "gnd_scprd.tblPacking"
+      ],
+      "elapsed_seconds": 0.4543,
+      "empty": true,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_ficac.tblProjectStandardProduction",
+        "gnd_ficac.tblProjectStandardProductionScannedBarcode",
+        "gnd_scprd.tblPacking"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U45",
+      "reference_sql_sha256": "85d1d808d6b701bc241b6d4f8fd1d48574d339f8be0f663c1ae3ff1084a516dc",
+      "result_columns": [
+        "PackingID",
+        "PackingDate",
+        "Serial"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Preserves the named report OnlyWithoutEnter filter: the maximum ISNULL(Code,0) across production records linked by serial is not 99; no linked record also qualifies. This is the report criterion, not an independent proof that no warehouse receipt exists. Non-null serial and inclusive packing dates are preserved. One row per pack; unused display-name and stock-status joins are omitted. No direct inventory anti-join or invented approval rule is added. Parameter contract: @InterweavingID must identify an entry in gnd_pjprj.evInterweaving, matching an ERP-selectable yarn group. Some physical packing references are absent from that entity view; accepting arbitrary IDs would not preserve the report. The production entity-view identity join was separately checked and removes no current production records. These display/audit-view joins are not physical Gold dependencies; the valid input domain and current-data invariant are explicit."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "elapsed_seconds": 0.0657,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U46",
+      "reference_sql_sha256": "ccd8987780ade976c49c31e3a489f15007c93bff550d098e7c7548f9e31cccc4",
+      "result_columns": [
+        "PurchaseInvoiceID",
+        "PurchaseInvoiceCode",
+        "InvoiceLineID",
+        "GoodID",
+        "GoodCode",
+        "GoodName",
+        "Qty",
+        "WarehouseAmount",
+        "UnitPrice",
+        "WarehouseAmountPerUnit"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "QUESTION_AND_GOLD_FIX",
+      "semantic_note": "The original warehouse-amount phrase exactly matches the explicit InvValue caption. AccValue has the distinct Amount caption. Divide InvValue by Qty, returning NULL for zero or NULL quantity; preserve stored NULL amounts. Missing-or-zero price is explicit in the revised wording. This is a read-only projection, not a price update."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblPurchaseInquiry",
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseOrderDetail",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail"
+      ],
+      "elapsed_seconds": 0.0782,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblPurchaseInquiry",
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseOrderDetail",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U47",
+      "reference_sql_sha256": "0a5154360447d7c3ec5768416e1e36dc7f20cc3192726adca020e64947b4b35e",
+      "result_columns": [
+        "PurchaseInquiryID",
+        "PurchaseInquiryCode",
+        "DoneDate",
+        "PurchaseRequestID",
+        "RequestEmployeeID",
+        "EmployeeCode"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "APPROVE_AS_IS",
+      "semantic_note": "The query uses directly stored fields and explicit Gold joins without an additional business rule."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblWork",
+        "gnd_scpch.tblPurchaseInquiry"
+      ],
+      "elapsed_seconds": 0.1947,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblWork",
+        "gnd_scpch.tblPurchaseInquiry"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U48",
+      "reference_sql_sha256": "a3355d49743b9af8d46d752475e8421bb248ec0f34de161445c3b15b97fe5bba",
+      "result_columns": [
+        "PurchaseInquiryID",
+        "PurchaseInquiryCode",
+        "DoneDate",
+        "CurrentUserID",
+        "CurrentApprover",
+        "CurrentProcessStepID",
+        "CurrentApprovalStep",
+        "RunStatusTypeID"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "Latest inquiry task uses greatest Work.ID, explicitly used by fnPurchaseInquiry_LastStepName. Only statuses 0/1 are active, exactly as vwRunningWorks. Select latest before testing active status, so no fallback to an older active task. CurrentUserID -> Contact.ID is the declared workflow assignee FK; NULL when the latest task is inactive or unassigned."
+    },
+    {
+      "bounded_rows_fetched": 0,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_scpch.evPrePurchaseInvoice",
+        "gnd_scpch.tblNotifyEnter",
+        "gnd_scpch.tblPrePurchaseInvoice",
+        "gnd_scpch.tblPrePurchaseInvoiceDetail",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "elapsed_seconds": 0.2247,
+      "empty": true,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_egbse.tblConvertDateTypeL",
+        "gnd_egbse.tblPerson",
+        "gnd_egbse.tblPersonStatus",
+        "gnd_egbse.tblPosition",
+        "gnd_egbse.tblPrefix",
+        "gnd_egbse.tblUser",
+        "gnd_scpch.tblNotifyEnter",
+        "gnd_scpch.tblPrePurchaseInvoice",
+        "gnd_scpch.tblPrePurchaseInvoiceDetail",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_scpch.tblSupplier",
+        "gnd_spgod.tblGood",
+        "gnu_egbse.xblContact",
+        "gnu_egbse.xblPerson",
+        "gnu_egbse.xblPrefix",
+        "gnu_scpch.xblPrePurchaseInvoice",
+        "gnu_scpch.xblSupplier"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U49",
+      "reference_sql_sha256": "753fe86a2a344448f93a901b9f45501601f96e67baf6f3b78a9d0c649b5d2ae0",
+      "result_columns": [
+        "ID",
+        "PrePurchaseInvoice",
+        "ItemsNotReceived",
+        "RemainedQty"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_note": "SELECT/CTE transcription of the existing open purchase pro forma report. Its original notification/QC eligibility, join multiplicity, per-item remaining-quantity calculation, positive-balance filter and detail-line grain are retained. This reports ERP-defined remaining quantities; it does not silently repair or reinterpret the report arithmetic. Entity-view display dependencies are included."
+    },
+    {
+      "bounded_rows_fetched": 10,
+      "certified_gold": true,
+      "direct_expected_tables": [
+        "gnd_crsls.tblCustomer",
+        "gnd_crsls.tblSalesAndServicesInvoice",
+        "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail",
+        "gnd_crsls.tblSalesAndServicesInvoiceServDetail",
+        "gnd_crsls.tblSellableService",
+        "gnd_egbse.tblContact",
+        "gnd_spgod.tblGood"
+      ],
+      "elapsed_seconds": 0.0833,
+      "empty": false,
+      "execution_valid": true,
+      "expected_tables": [
+        "gnd_crsls.tblCustomer",
+        "gnd_crsls.tblSalesAndServicesInvoice",
+        "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail",
+        "gnd_crsls.tblSalesAndServicesInvoiceServDetail",
+        "gnd_crsls.tblSellableService",
+        "gnd_egbse.tblContact",
+        "gnd_fiaci.tblVatPercentage",
+        "gnd_spgod.tblGood"
+      ],
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "fully_counted": false,
+      "hidden_current_time_helpers": [],
+      "human_approved": true,
+      "id": "FINAL-U50",
+      "reference_sql_sha256": "a1636a4c65fe7b39eae7b982fcc4ca9503d55d47080b097549d438f2a5adfa52",
+      "result_columns": [
+        "SalesInvoiceID",
+        "InvoiceNumber",
+        "InvoiceDate",
+        "CredbCustomerID",
+        "CustomerCode",
+        "CustomerName",
+        "LineType",
+        "InvoiceLineID",
+        "ItemID",
+        "ItemName",
+        "Qty",
+        "UnitPrice",
+        "DiscountValue",
+        "Vat",
+        "ERPLineValueBeforeVAT"
+      ],
+      "semantic_audit_status": "FINAL_APPROVED_BOUNDED_VALIDATED",
+      "semantic_audit_verdict": "QUESTION_AND_GOLD_FIX",
+      "semantic_note": "UNION ALL preserves goods and service lines. LineType plus InvoiceLineID identifies the line family. Goods use existing RowTotalPayable (Qty times ActualUnitPrice less discount); services use existing SalesValue (Qty times UnitPrice less discount). Both exclude VAT, which is a separate output; neither value is recomputed with a new pricing rule. Displayed goods UnitPrice can differ from ActualUnitPrice used by the ERP calculation.",
+      "service_branch_validation": {
+        "bounded_rows_fetched": 0,
+        "case_id": "FINAL-U50",
+        "column_count": 15,
+        "empty": true,
+        "execution_valid": true,
+        "purpose": "Validate service branch without fetching through goods result set",
+        "reference_sql_sha256": "a1636a4c65fe7b39eae7b982fcc4ca9503d55d47080b097549d438f2a5adfa52",
+        "sample_limit": 3
+      }
+    }
+  ],
+  "sample_limit": 10,
+  "unique_expected_physical_dependencies": 139,
+  "unvalidated_count": 0,
+  "validated_at_utc": "2026-09-28T18:54:37.659684+00:00"
+}

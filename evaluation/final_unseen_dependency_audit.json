@@ -1,0 +1,2381 @@
+{
+  "status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+  "case_count": 50,
+  "overall_expected_table_count_finalized": true,
+  "method": "Scoped SQL AST for direct relations/columns, SQL Server computed definitions and recursive helper dependencies; non-schema-bound column references checked against helper bodies. No FK-neighbor expansion. All required physical tables emitted, including explicitly documented out-of-corpus company metadata.",
+  "records": [
+    {
+      "direct_tables": [
+        "gnd_crsls.tblSalesAndServicesInvoice"
+      ],
+      "final_expected_tables": [
+        "gnd_crsls.tblSalesAndServicesInvoice"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U01",
+      "declared_expected_tables": [
+        "gnd_crsls.tblSalesAndServicesInvoice"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "fb892125697eced39b70dbbe8e4b88f7587708a7f054665c40cdc3fa972f56c4",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U02",
+      "declared_expected_tables": [
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "15dcf6a22d246cfbf89427d4e4d0444889c77c538ccb0570328cb44d88ccf845",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblGoodServiceRequest",
+        "gnd_scpch.tblGoodServiceRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblGoodServiceRequest",
+        "gnd_scpch.tblGoodServiceRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U03",
+      "declared_expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblGoodServiceRequest",
+        "gnd_scpch.tblGoodServiceRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "3e04f1e98cabc8258251c017f7943f1adbca37112ac776da07209c8cff774276",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_scinv.tblTransportationCompanyDriverDetail"
+      ],
+      "final_expected_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_crsls.tblLoadingDetail",
+        "gnd_crsls.tblLoadingSerialDetail",
+        "gnd_scinv.tblSerial",
+        "gnd_scinv.tblTransportationCompanyDriverDetail",
+        "gnd_scprd.tblPacking",
+        "gnd_scprd.tblRawMaterialPacking",
+        "gnd_scprd.tblWastePacking"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [
+        "gnd_crsls.fnLoadingTotalNetGrossWeight",
+        "gnd_crsls.fnLoadingTotalNetGrossWeightCall",
+        "gnd_scprd.fnRawMaterialPackingSerial"
+      ],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [
+        {
+          "from": "Gold FROM/JOIN",
+          "computed_column": "gnd_crsls.tblLoading.TotalNetWeight"
+        },
+        {
+          "from": "gnd_crsls.fnLoadingTotalNetGrossWeightCall",
+          "to": "gnd_crsls.fnLoadingTotalNetGrossWeight",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnLoadingTotalNetGrossWeight",
+          "to": "gnd_crsls.tblLoadingDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnLoadingTotalNetGrossWeight",
+          "to": "gnd_crsls.tblLoadingSerialDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnLoadingTotalNetGrossWeight",
+          "to": "gnd_scprd.tblPacking",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnLoadingTotalNetGrossWeight",
+          "to": "gnd_scprd.tblRawMaterialPacking",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnLoadingTotalNetGrossWeight",
+          "to": "gnd_scinv.tblSerial",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnLoadingTotalNetGrossWeight",
+          "to": "gnd_scprd.tblWastePacking",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnLoadingTotalNetGrossWeight",
+          "computed_column": "gnd_scprd.tblRawMaterialPacking.Serial"
+        },
+        {
+          "from": "gnd_scprd.fnRawMaterialPackingSerial",
+          "to": "gnd_scinv.tblSerial",
+          "referenced_column": null
+        }
+      ],
+      "id": "FINAL-U04",
+      "declared_expected_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_scinv.tblTransportationCompanyDriverDetail"
+      ],
+      "missing_physical_dependencies_found": [
+        "gnd_crsls.tblLoadingDetail",
+        "gnd_crsls.tblLoadingSerialDetail",
+        "gnd_scinv.tblSerial",
+        "gnd_scprd.tblPacking",
+        "gnd_scprd.tblRawMaterialPacking",
+        "gnd_scprd.tblWastePacking"
+      ],
+      "added_since_human_finalization_baseline": [
+        "gnd_crsls.tblLoadingDetail",
+        "gnd_crsls.tblLoadingSerialDetail",
+        "gnd_scinv.tblSerial",
+        "gnd_scprd.tblPacking",
+        "gnd_scprd.tblRawMaterialPacking",
+        "gnd_scprd.tblWastePacking"
+      ],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "daee7eaa682db0b37a36e70a3a44ce62bdfce5add9e4d826da43d6788027b699",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_crsls.tblSalesOrder",
+        "gnd_crsls.tblSalesOrderDetail",
+        "gnd_crsls.tblSalesOrderWasteDetail"
+      ],
+      "final_expected_tables": [
+        "gnd_crsls.tblSalesOrder",
+        "gnd_crsls.tblSalesOrderDetail",
+        "gnd_crsls.tblSalesOrderWasteDetail"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U05",
+      "declared_expected_tables": [
+        "gnd_crsls.tblSalesOrder",
+        "gnd_crsls.tblSalesOrderDetail",
+        "gnd_crsls.tblSalesOrderWasteDetail"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "afd570ad25bcee221634023d70a91d254a20ecea0b7089d1a146f0a81995ee56",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblInventory",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_scpch.tblPurchaseInvoiceSeparatedEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblInventory",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_scpch.tblPurchaseInvoiceSeparatedEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U06",
+      "declared_expected_tables": [
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblInventory",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_scpch.tblPurchaseInvoiceSeparatedEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "550340685a0b9d5bebbac93fbf1e888feea6f4299f86155d2b1762b5ad7c29a3",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblEmployeeShiftAdditionalOffDates",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblEmployeeShiftAdditionalOffDates",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U07",
+      "declared_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblEmployeeShiftAdditionalOffDates",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "f9aa23988fce7f15b94523e990ce6da2ef3b23d3e96e8272e60538828ba7467c",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblDepartment",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_egwfm.tblWorkRoute",
+        "gnd_hrcio.tblEmployeeExitPermission",
+        "gnu_hrcio.xblEmployeeExitPermission"
+      ],
+      "final_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblDepartment",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_egwfm.tblWorkRoute",
+        "gnd_hrcio.tblEmployeeExitPermission",
+        "gnu_hrcio.xblEmployeeExitPermission"
+      ],
+      "outside_corpus_dependencies": [
+        "gnu_hrcio.xblEmployeeExitPermission"
+      ],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U08",
+      "declared_expected_tables": [
+        "gnd_egbse.tblDepartment",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_hrcio.tblEmployeeExitPermission"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egwfm.tblWorkRoute",
+        "gnu_hrcio.xblEmployeeExitPermission"
+      ],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "604ebc6955c98a63cb74cedf0247c40d7adcfe5e551f54a9fd48510ea5a079ea",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "final_expected_tables": [
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U09",
+      "declared_expected_tables": [
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [
+        "gnd_hrcio.tblEmployeeShift"
+      ],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "8400173e2f80bfce68cd2b38a9f712be90c04b89f654744390c3515fdf482786",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U10",
+      "declared_expected_tables": [
+        "gnd_hrcio.tblWorkTimeAllDays",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "removed_since_human_finalization_baseline": [
+        "gnd_hrcio.tblWorkTimeAllDays"
+      ],
+      "reference_sql_sha256": "540fad5bf7d1f9eeccd1ba50dde99b4a15f51ba47dd8638649c045f829742580",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrfod.tblEmployeeFood",
+        "gnd_hrfod.tblEmployeeFoodDelivery",
+        "gnd_hrfod.tblEmployeeFoodRequest",
+        "gnd_hrfod.tblEmployeeFoodRequestDetail",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrfod.tblEmployeeFood",
+        "gnd_hrfod.tblEmployeeFoodDelivery",
+        "gnd_hrfod.tblEmployeeFoodRequest",
+        "gnd_hrfod.tblEmployeeFoodRequestDetail",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U11",
+      "declared_expected_tables": [
+        "gnd_hrfod.tblEmployeeFood",
+        "gnd_hrfod.tblEmployeeFoodDelivery",
+        "gnd_hrfod.tblEmployeeFoodRequest",
+        "gnd_hrfod.tblEmployeeFoodRequestDetail",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [
+        "gnd_egbse.tblYearMonth"
+      ],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "f250bf5b05909a4636ace031b1bf3c15a0c9aa790f21feed1a0f26fe00266ed8",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblCofferMembership",
+        "gnd_hrpyr.tblEmployeeLoanRequest"
+      ],
+      "final_expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblCofferMembership",
+        "gnd_hrpyr.tblEmployeeLoanRequest"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U12",
+      "declared_expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblCofferMembership",
+        "gnd_hrpyr.tblEmployeeLoanRequest"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "6aeb3df77010a6c6c292c3b0e33064d86b5d29b4034d56d69d7011e665b370a5",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblPacking",
+        "gnd_spgod.tblQualityType",
+        "gnd_spgod.tblSpinningCountType",
+        "gnd_spgod.tblSpinningSystemType",
+        "gnd_spgod.tblYarnType"
+      ],
+      "final_expected_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblPacking",
+        "gnd_spgod.tblQualityType",
+        "gnd_spgod.tblSpinningCountType",
+        "gnd_spgod.tblSpinningSystemType",
+        "gnd_spgod.tblYarnType"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U13",
+      "declared_expected_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblPacking",
+        "gnd_spgod.tblQualityType",
+        "gnd_spgod.tblSpinningCountType",
+        "gnd_spgod.tblSpinningSystemType",
+        "gnd_spgod.tblYarnType"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "3c034d19b3545b62e6bf3f0b84408ac588a5ecc7cf1a5459833a1871e7637305",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblSpindleLable",
+        "gnd_spgod.tblSpinningSystemType"
+      ],
+      "final_expected_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblSpindleLable",
+        "gnd_spgod.tblSpinningSystemType"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U14",
+      "declared_expected_tables": [
+        "gnd_pjprj.tblInterweaving",
+        "gnd_scprd.tblSpindleLable",
+        "gnd_spgod.tblSpinningSystemType"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "1bbb4ae4b371c1f99719b14089d03dbc34b2739d7f9fcf639dc5613accbd95c7",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U15",
+      "declared_expected_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "f285e15793d67460036086bc8cea2db80eabd66447648bbefb808c1c5bac7f4f",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblWorkOrder"
+      ],
+      "final_expected_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblWorkOrder"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U16",
+      "declared_expected_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblWorkOrder"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "6b093f6f50d5c75c30b719a28be0beaddbbbaaf95e66f5d011685c061c2c6a3f",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblRoutineCovered"
+      ],
+      "final_expected_tables": [
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblRoutineCovered"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U17",
+      "declared_expected_tables": [
+        "gnd_amspt.tblRoutine",
+        "gnd_amspt.tblRoutineCovered"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "e55a93486193262181174c797695b56c03cd418e8133753964a0b04d3e09aad9",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "final_expected_tables": [
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U18",
+      "declared_expected_tables": [
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "4f71aab2c213db53e3182aaaee69c713122add2a423d585ac4bd4dfc13a23064",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_firpd.tblBankInput",
+        "gnd_firpd.tblBankInputDetail"
+      ],
+      "final_expected_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_firpd.tblBankInput",
+        "gnd_firpd.tblBankInputDetail"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U19",
+      "declared_expected_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_firpd.tblBankInput",
+        "gnd_firpd.tblBankInputDetail"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "cc5a49aa598dba9dd34214f75314b6f36bb78ddef46c05ca89a6ff1cb43dda1c",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail"
+      ],
+      "final_expected_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U20",
+      "declared_expected_tables": [
+        "gnd_fiaci.tblAccount",
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "e99a4852f7947ae7626950a81e813bd6d592797dd84597ce7db2242c9366a79c",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_pjprj.tblProject",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService"
+      ],
+      "final_expected_tables": [
+        "gnd_pjprj.tblProject",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U21",
+      "declared_expected_tables": [
+        "gnd_pjprj.tblProject",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "c0d348d41911d941f0ccb3796b90bac228aef484ebca5b536f80dc4629b52898",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblChatLastSeen"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblChatLastSeen"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U22",
+      "declared_expected_tables": [
+        "gnd_egbse.tblChatLastSeen"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "ff2ec21e6bbb26428ee968882780b134d6480b6b1b9c09ea584121f2943b435f",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblRole",
+        "gnd_egbse.tblRoleDomain",
+        "gnd_egbse.tblRoleSystem",
+        "gnd_egbse.tblRoleSystemForm",
+        "gnd_egbse.tblRoleSystemReport",
+        "gnd_egfrm.tblFormType",
+        "gnd_egrpt.tblReport",
+        "gnd_egsys.tblCaption",
+        "gnd_egsys.tblSystem"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblRole",
+        "gnd_egbse.tblRoleDomain",
+        "gnd_egbse.tblRoleSystem",
+        "gnd_egbse.tblRoleSystemForm",
+        "gnd_egbse.tblRoleSystemReport",
+        "gnd_egfrm.tblFormType",
+        "gnd_egrpt.tblReport",
+        "gnd_egsys.tblCaption",
+        "gnd_egsys.tblSystem"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U23",
+      "declared_expected_tables": [
+        "gnd_egbse.tblRole",
+        "gnd_egbse.tblRoleDomain",
+        "gnd_egbse.tblRoleSystem",
+        "gnd_egbse.tblRoleSystemForm",
+        "gnd_egbse.tblRoleSystemReport",
+        "gnd_egfrm.tblFormType",
+        "gnd_egrpt.tblReport",
+        "gnd_egsys.tblCaption",
+        "gnd_egsys.tblSystem"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "2c0e782e3df5a20c891df702ad1f1aa909b5e7ee29abae051c3ab8cb4754fd04",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_ofsct.tblInternalLetter"
+      ],
+      "final_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_ofsct.tblInternalLetter"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U24",
+      "declared_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork",
+        "gnd_ofsct.tblInternalLetter"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "90913ea51a9d84d6ee5f7337d8dc3419b51962769d9fe8f0638b99ef374d3206",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_scinv.tblGoodConsume",
+        "gnd_scinv.tblGoodConsumeDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_scinv.tblGoodConsume",
+        "gnd_scinv.tblGoodConsumeDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U25",
+      "declared_expected_tables": [
+        "gnd_scinv.tblGoodConsume",
+        "gnd_scinv.tblGoodConsumeDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "20f072258c61d3d21794b2c46673fff17ab9146e21ebe6fe943c527f34376ce3",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblFeedback",
+        "gnd_amspt.tblWorkOrder",
+        "gnd_egwfm.tblWorkRoute"
+      ],
+      "final_expected_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblFeedback",
+        "gnd_amspt.tblWorkOrder",
+        "gnd_egwfm.tblWorkRoute"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U26",
+      "declared_expected_tables": [
+        "gnd_amast.tblEquipment",
+        "gnd_amspt.tblFeedback",
+        "gnd_amspt.tblWorkOrder",
+        "gnd_egwfm.tblWorkRoute"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "ef78725988783bcc17bcf2d517b0ce93583edcecc47a70960044da781191e52d",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egfrm.tblFormEquivalency",
+        "gnd_fiaci.tblAccountDetail",
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail",
+        "gnd_firpd.tblInputChequeBankReceive"
+      ],
+      "final_expected_tables": [
+        "gnd_egfrm.tblFormEquivalency",
+        "gnd_fiaci.tblAccountDetail",
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail",
+        "gnd_firpd.tblInputChequeBankReceive"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U27",
+      "declared_expected_tables": [
+        "gnd_fiaci.tblTrans",
+        "gnd_fiaci.tblTransDetail",
+        "gnd_fiaci.tblTransDetailDetail",
+        "gnd_firpd.tblInputChequeBankReceive"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [
+        "gnd_egfrm.tblFormEquivalency",
+        "gnd_fiaci.tblAccountDetail"
+      ],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "a822a68096ff9339775dcf073c0fa63b6ca69d334ff9bf4c1f3ead3ef4297cc0",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U28",
+      "declared_expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_firpd.tblPayRequest",
+        "gnd_firpd.tblPayRequestDetail"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "35e856d82a10a7665e507a8980416bac7ffbb4e8e0eb6ce5cecc12263f780662",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_firpd.tblInputCheque"
+      ],
+      "final_expected_tables": [
+        "gnd_firpd.tblInputCheque"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U29",
+      "declared_expected_tables": [
+        "gnd_firpd.tblInputCheque"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "0fcfa0c895f3ffc7642e42c33270d643fba8f9fcc8ae205cea1e0252e9da905c",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_crsls.tblLoadingScannedBarcode",
+        "gnd_pjprj.tblInterweaving"
+      ],
+      "final_expected_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_crsls.tblLoadingScannedBarcode",
+        "gnd_pjprj.tblInterweaving"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U30",
+      "declared_expected_tables": [
+        "gnd_crsls.tblLoading",
+        "gnd_crsls.tblLoadingScannedBarcode",
+        "gnd_pjprj.tblInterweaving"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "64de50e2e3506f7db429721e20a29617a411053f92ae9c7c406dbf8400aa3657",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_fiaci.tblPeriodSpec",
+        "gnd_scinv.tblInventory",
+        "gnd_scinv.vwEnter",
+        "gnd_scinv.vwExit",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_fiaci.tblPeriodSpec",
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblEnterDetail",
+        "gnd_scinv.tblExit",
+        "gnd_scinv.tblExitDetail",
+        "gnd_scinv.tblInventory",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood",
+        "gnu_scinv.xblEnter",
+        "gnu_scinv.xblExit"
+      ],
+      "outside_corpus_dependencies": [
+        "gnu_scinv.xblEnter",
+        "gnu_scinv.xblExit"
+      ],
+      "helper_objects": [
+        "gnd_scinv.vwEnter",
+        "gnd_scinv.vwExit"
+      ],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [
+        {
+          "from": "Gold FROM/JOIN",
+          "view": "gnd_scinv.vwEnter",
+          "selected_columns": [
+            "code",
+            "creatorcompanyid",
+            "credbgoodid",
+            "credbinventoryid",
+            "donedate",
+            "periodspecid",
+            "qty"
+          ]
+        },
+        {
+          "from": "Gold FROM/JOIN",
+          "view": "gnd_scinv.vwExit",
+          "selected_columns": [
+            "code",
+            "creatorcompanyid",
+            "credbgoodid",
+            "credbinventoryid",
+            "donedate",
+            "periodspecid",
+            "qty"
+          ]
+        }
+      ],
+      "id": "FINAL-U31",
+      "declared_expected_tables": [
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblEnterDetail",
+        "gnd_scinv.tblExit",
+        "gnd_scinv.tblExitDetail",
+        "gnd_scinv.tblInventory",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "missing_physical_dependencies_found": [
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblEnterDetail",
+        "gnd_scinv.tblExit",
+        "gnd_scinv.tblExitDetail",
+        "gnu_scinv.xblEnter",
+        "gnu_scinv.xblExit"
+      ],
+      "added_since_human_finalization_baseline": [
+        "gnd_fiaci.tblPeriodSpec",
+        "gnu_scinv.xblEnter",
+        "gnu_scinv.xblExit"
+      ],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "0e73d7eafe47012fdb1770ebbd40e0d94bbcc6eb3ff56bb43eda5b89b3132d75",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblEnterDetail",
+        "gnd_scinv.tblInventory",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblEnterDetail",
+        "gnd_scinv.tblInventory",
+        "gnd_spgod.tblGood"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U32",
+      "declared_expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_scinv.tblEnter",
+        "gnd_scinv.tblInventory",
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_scpch.tblPurchaseInvoiceSeparatedEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [
+        "gnd_scinv.tblEnterDetail"
+      ],
+      "removed_since_human_finalization_baseline": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_scpch.tblPurchaseInvoiceSeparatedEnter"
+      ],
+      "reference_sql_sha256": "b6df289a7405b74bb5c4e746dc5decb62e0e47a528791c9c67ba9268eda71892",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egwfm.tblWorkEnd"
+      ],
+      "final_expected_tables": [
+        "gnd_egwfm.tblWorkEnd"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U33",
+      "declared_expected_tables": [
+        "gnd_egwfm.tblWorkEnd"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "126b3b03adc21d49d6d2f1e8602b136c318bd5368ed3514668a5611f5dfb137e",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork"
+      ],
+      "final_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U34",
+      "declared_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblRunStatusTypeL",
+        "gnd_egwfm.tblWork"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "f3af8041213a3e324bb90538ac7c268c344511d6c53a0f2a8e162374f4e3328a",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_ofsct.tblInternalLetter",
+        "gnd_ofsct.tblRecEmpInternalLetter"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_ofsct.tblInternalLetter",
+        "gnd_ofsct.tblRecEmpInternalLetter"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U35",
+      "declared_expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_ofsct.tblInternalLetter",
+        "gnd_ofsct.tblRecEmpInternalLetter"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "48cb7f0161a71679982c01bfdef7fe124d9e30af3be3602a5891d9526d285915",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U36",
+      "declared_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "6bfd1babddd0e70811b95c1506482e7d98ef918370af5f93cf2eba290b078dcb",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblConvertDateTypeL",
+        "gnd_egbse.tblYearMonth",
+        "gnd_egsys.tblSystemConfig",
+        "gnd_egsys.tblSystemConfigDetail",
+        "gnd_hrcio.tblAttendenceRules",
+        "gnd_hrcio.tblCalendarHolidays",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblEmployeeLeave",
+        "gnd_hrcio.tblEmployeeSavedLeave",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblShift",
+        "gnd_hrcio.tblShiftDetail",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblShiftTemplateDetail",
+        "gnd_hrcio.uvEmployeeShift",
+        "gnd_hrcio.vwEmployeeShiftCompleteReport",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrprs.tblEmployeeEmploymentStatus",
+        "gnd_hrprs.tblEmployeeIncentive"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblConvertDateTypeL",
+        "gnd_egbse.tblPersonStatus",
+        "gnd_egbse.tblPosition",
+        "gnd_egbse.tblSecurityConfig",
+        "gnd_egbse.tblUnit",
+        "gnd_egbse.tblUser",
+        "gnd_egbse.tblYearMonth",
+        "gnd_egsys.tblSystemConfig",
+        "gnd_egsys.tblSystemConfigDetail",
+        "gnd_hrcio.tblAttendenceRules",
+        "gnd_hrcio.tblCalendarHolidays",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblEmployeeLeave",
+        "gnd_hrcio.tblEmployeeSavedLeave",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShift",
+        "gnd_hrcio.tblShiftDetail",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblShiftTemplateDetail",
+        "gnd_hrcio.tblWorkShiftType",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrprs.tblEmployeeEmploymentStatus",
+        "gnd_hrprs.tblEmployeeIncentive",
+        "gnu_hrcio.xblEmployeeShift"
+      ],
+      "outside_corpus_dependencies": [
+        "gnu_hrcio.xblEmployeeShift"
+      ],
+      "helper_objects": [
+        "gnd_egbse.vwUserPosition",
+        "gnd_hrcio.uvEmployeeShift",
+        "gnd_hrcio.vwEmployeeShiftCompleteReport"
+      ],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblEmployeeShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblEmployeeShiftModifications",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShiftDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShiftTemplate",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblWorkShiftType",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblEmployeeShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblEmployeeShiftModifications",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShiftDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShiftTemplate",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblWorkShiftType",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblEmployeeShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblEmployeeShiftModifications",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShiftDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShiftTemplate",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblWorkShiftType",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.uvEmployeeShift",
+          "builtin_method": "tblUnit.Hirarchy.IsDescendantOf",
+          "not_cross_database": true
+        },
+        {
+          "from": "gnd_hrcio.uvEmployeeShift",
+          "to": "gnd_hrcio.tblEmployeeShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.uvEmployeeShift",
+          "to": "gnd_egbse.tblSecurityConfig",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.uvEmployeeShift",
+          "to": "gnd_egbse.tblUnit",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.uvEmployeeShift",
+          "to": "gnd_egbse.vwUserPosition",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.uvEmployeeShift",
+          "to": "gnu_hrcio.xblEmployeeShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.uvEmployeeShift",
+          "view": "gnd_egbse.vwUserPosition",
+          "selected_columns": [
+            "companyid",
+            "hirarchy",
+            "id",
+            "personpositionid",
+            "sysusername",
+            "unitid"
+          ]
+        }
+      ],
+      "id": "FINAL-U37",
+      "declared_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "missing_physical_dependencies_found": [
+        "gnd_egbse.tblPersonStatus",
+        "gnd_egbse.tblPosition",
+        "gnd_egbse.tblSecurityConfig",
+        "gnd_egbse.tblUnit",
+        "gnd_egbse.tblUser",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblWorkShiftType",
+        "gnu_hrcio.xblEmployeeShift"
+      ],
+      "added_since_human_finalization_baseline": [
+        "gnd_egbse.tblConvertDateTypeL",
+        "gnd_egbse.tblPersonStatus",
+        "gnd_egbse.tblPosition",
+        "gnd_egbse.tblSecurityConfig",
+        "gnd_egbse.tblUnit",
+        "gnd_egbse.tblUser",
+        "gnd_egsys.tblSystemConfig",
+        "gnd_egsys.tblSystemConfigDetail",
+        "gnd_hrcio.tblAttendenceRules",
+        "gnd_hrcio.tblCalendarHolidays",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblEmployeeLeave",
+        "gnd_hrcio.tblEmployeeSavedLeave",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShift",
+        "gnd_hrcio.tblShiftDetail",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblShiftTemplateDetail",
+        "gnd_hrcio.tblWorkShiftType",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblEmployeeEmploymentStatus",
+        "gnd_hrprs.tblEmployeeIncentive",
+        "gnu_hrcio.xblEmployeeShift"
+      ],
+      "removed_since_human_finalization_baseline": [
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "reference_sql_sha256": "eb2e14d85b9057e5413e7012facac99768b6ec3e990212223f77feb189cce714",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrapr.tblManagerHRFeedback",
+        "gnd_hrapr.tblManagerHRFeedbackLeavedEmployeeDetail"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrapr.tblManagerHRFeedback",
+        "gnd_hrapr.tblManagerHRFeedbackLeavedEmployeeDetail"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U38",
+      "declared_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [
+        "gnd_hrapr.tblManagerHRFeedback",
+        "gnd_hrapr.tblManagerHRFeedbackLeavedEmployeeDetail"
+      ],
+      "removed_since_human_finalization_baseline": [
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "reference_sql_sha256": "9ec714021d19b102ab259bd2f7e78d14a7f37de9a4dc7abe4f3de86ff344d8f5",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblLegalPosition",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblLegalPosition",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U39",
+      "declared_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblLegalPosition",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "93583b80a473c7f60ae2331f96ae2fced176d4c06b2dd4edd9562b7f3d365c96",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblJobGroup",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblJobGroup",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U40",
+      "declared_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblContract",
+        "gnd_hrprs.tblJobGroup",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "39547e783f1368cfad349728b774f31b76fa01f440718b04c4bc63ce4455ea74",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblWorkTimeAllDays",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblWorkTimeAllDays",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U41",
+      "declared_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblWorkTimeAllDays",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "3e3fb261ac331a1675b751991a6a871df6d7587d5bb66d5351b7e054ee9d5d4c",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egwfm.tblWork",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblForgottenEnterExit",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "final_expected_tables": [
+        "gnd_egwfm.tblWork",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblForgottenEnterExit",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U42",
+      "declared_expected_tables": [
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblForgottenEnterExit",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [
+        "gnd_egwfm.tblWork"
+      ],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "8f210fb963a6e33c900e7bd32447830d5b16a60dab6d9d93b4c5f55009926323",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.vwEmployeeShiftCompleteReport",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShift",
+        "gnd_hrcio.tblShiftDetail",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblWorkShiftType",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [
+        "gnd_hrcio.vwEmployeeShiftCompleteReport"
+      ],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblEmployeeShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblEmployeeShiftModifications",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShift",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShiftDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblShiftTemplate",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_hrcio.vwEmployeeShiftCompleteReport",
+          "to": "gnd_hrcio.tblWorkShiftType",
+          "referenced_column": null
+        }
+      ],
+      "id": "FINAL-U43",
+      "declared_expected_tables": [
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblWorkTimeAllDays",
+        "gnd_hrprs.tblEmployee"
+      ],
+      "missing_physical_dependencies_found": [
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShift",
+        "gnd_hrcio.tblShiftDetail",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblWorkShiftType"
+      ],
+      "added_since_human_finalization_baseline": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrcio.tblCardLog",
+        "gnd_hrcio.tblEmployeeShiftModifications",
+        "gnd_hrcio.tblShift",
+        "gnd_hrcio.tblShiftDetail",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblWorkShiftType"
+      ],
+      "removed_since_human_finalization_baseline": [
+        "gnd_hrcio.tblWorkTimeAllDays"
+      ],
+      "reference_sql_sha256": "260d01115c61e787037015c5ea80d8b2f451d64914546a3c375012e68d91b0ff",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U44",
+      "declared_expected_tables": [
+        "gnd_egbse.tblYearMonth",
+        "gnd_hrprs.tblEmployee",
+        "gnd_hrpyr.tblWorkTime"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "e34645469d49544b6aa348bee3c33414b2f3ff8cc48f941f2f491f149d6f002e",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_ficac.tblProjectStandardProduction",
+        "gnd_ficac.tblProjectStandardProductionScannedBarcode",
+        "gnd_scprd.tblPacking"
+      ],
+      "final_expected_tables": [
+        "gnd_ficac.tblProjectStandardProduction",
+        "gnd_ficac.tblProjectStandardProductionScannedBarcode",
+        "gnd_scprd.tblPacking"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U45",
+      "declared_expected_tables": [
+        "gnd_ficac.tblProjectStandardProduction",
+        "gnd_ficac.tblProjectStandardProductionScannedBarcode",
+        "gnd_scprd.tblPacking"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "85d1d808d6b701bc241b6d4f8fd1d48574d339f8be0f663c1ae3ff1084a516dc",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U46",
+      "declared_expected_tables": [
+        "gnd_scpch.tblPurchaseInvoiceGoodAndService",
+        "gnd_scpch.tblPurchaseInvoiceGoodDetailEnter",
+        "gnd_spgod.tblGood"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "ccd8987780ade976c49c31e3a489f15007c93bff550d098e7c7548f9e31cccc4",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblPurchaseInquiry",
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseOrderDetail",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail"
+      ],
+      "final_expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblPurchaseInquiry",
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseOrderDetail",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U47",
+      "declared_expected_tables": [
+        "gnd_hrprs.tblEmployee",
+        "gnd_scpch.tblPurchaseInquiry",
+        "gnd_scpch.tblPurchaseOrder",
+        "gnd_scpch.tblPurchaseOrderDetail",
+        "gnd_scpch.tblPurchaseRequest",
+        "gnd_scpch.tblPurchaseRequestDetail"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "0a5154360447d7c3ec5768416e1e36dc7f20cc3192726adca020e64947b4b35e",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblWork",
+        "gnd_scpch.tblPurchaseInquiry"
+      ],
+      "final_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblWork",
+        "gnd_scpch.tblPurchaseInquiry"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [],
+      "id": "FINAL-U48",
+      "declared_expected_tables": [
+        "gnd_egbpm.tblProcessStep",
+        "gnd_egbse.tblContact",
+        "gnd_egwfm.tblWork",
+        "gnd_scpch.tblPurchaseInquiry"
+      ],
+      "missing_physical_dependencies_found": [],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "a3355d49743b9af8d46d752475e8421bb248ec0f34de161445c3b15b97fe5bba",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_scpch.evPrePurchaseInvoice",
+        "gnd_scpch.tblNotifyEnter",
+        "gnd_scpch.tblPrePurchaseInvoice",
+        "gnd_scpch.tblPrePurchaseInvoiceDetail",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_egbse.tblContact",
+        "gnd_egbse.tblConvertDateTypeL",
+        "gnd_egbse.tblPerson",
+        "gnd_egbse.tblPersonStatus",
+        "gnd_egbse.tblPosition",
+        "gnd_egbse.tblPrefix",
+        "gnd_egbse.tblUser",
+        "gnd_scpch.tblNotifyEnter",
+        "gnd_scpch.tblPrePurchaseInvoice",
+        "gnd_scpch.tblPrePurchaseInvoiceDetail",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_scpch.tblSupplier",
+        "gnd_spgod.tblGood",
+        "gnu_egbse.xblContact",
+        "gnu_egbse.xblPerson",
+        "gnu_egbse.xblPrefix",
+        "gnu_scpch.xblPrePurchaseInvoice",
+        "gnu_scpch.xblSupplier"
+      ],
+      "outside_corpus_dependencies": [
+        "gnu_egbse.xblContact",
+        "gnu_egbse.xblPerson",
+        "gnu_egbse.xblPrefix",
+        "gnu_scpch.xblPrePurchaseInvoice",
+        "gnu_scpch.xblSupplier"
+      ],
+      "helper_objects": [
+        "gnd_egbse.UvContact",
+        "gnd_egbse.UvPrefix",
+        "gnd_egbse.evContact",
+        "gnd_egbse.evPerson",
+        "gnd_egbse.evPrefix",
+        "gnd_egbse.uvContact",
+        "gnd_egbse.uvPerson",
+        "gnd_egbse.vwUserPosition",
+        "gnd_scpch.UvPrePurchaseInvoice",
+        "gnd_scpch.UvSupplier",
+        "gnd_scpch.evPrePurchaseInvoice",
+        "gnd_scpch.evSupplier"
+      ],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [
+        {
+          "from": "Gold FROM/JOIN",
+          "view": "gnd_scpch.evPrePurchaseInvoice",
+          "selected_columns": [
+            "farsi",
+            "id"
+          ]
+        },
+        {
+          "from": "gnd_scpch.evPrePurchaseInvoice",
+          "view": "gnd_scpch.UvPrePurchaseInvoice",
+          "selected_columns": [
+            "donedate"
+          ]
+        },
+        {
+          "from": "gnd_scpch.evPrePurchaseInvoice",
+          "view": "gnd_scpch.UvPrePurchaseInvoice",
+          "selected_columns": [
+            "creditsupplierid",
+            "donedate",
+            "id"
+          ]
+        },
+        {
+          "from": "gnd_scpch.evPrePurchaseInvoice",
+          "view": "gnd_scpch.evSupplier",
+          "selected_columns": [
+            "farsi",
+            "id"
+          ]
+        },
+        {
+          "from": "gnd_scpch.UvPrePurchaseInvoice",
+          "view": "gnd_egbse.vwUserPosition",
+          "selected_columns": [
+            "companyid",
+            "sysusername"
+          ]
+        },
+        {
+          "from": "gnd_scpch.evSupplier",
+          "view": "gnd_scpch.UvSupplier",
+          "selected_columns": [
+            "id"
+          ]
+        },
+        {
+          "from": "gnd_scpch.evSupplier",
+          "view": "gnd_egbse.evPerson",
+          "selected_columns": [
+            "farsi",
+            "id"
+          ]
+        },
+        {
+          "from": "gnd_scpch.UvSupplier",
+          "view": "gnd_egbse.uvPerson",
+          "selected_columns": [
+            "id"
+          ]
+        },
+        {
+          "from": "gnd_egbse.evPerson",
+          "view": "gnd_egbse.evContact",
+          "selected_columns": [
+            "farsi",
+            "id"
+          ]
+        },
+        {
+          "from": "gnd_egbse.uvPerson",
+          "view": "gnd_egbse.uvContact",
+          "selected_columns": [
+            "id"
+          ]
+        },
+        {
+          "from": "gnd_egbse.evContact",
+          "view": "gnd_egbse.UvContact",
+          "selected_columns": [
+            "farsi",
+            "id",
+            "prefixid"
+          ]
+        },
+        {
+          "from": "gnd_egbse.evContact",
+          "view": "gnd_egbse.evPrefix",
+          "selected_columns": [
+            "farsi",
+            "id"
+          ]
+        },
+        {
+          "from": "gnd_egbse.evPrefix",
+          "view": "gnd_egbse.UvPrefix",
+          "selected_columns": [
+            "farsi",
+            "id"
+          ]
+        }
+      ],
+      "id": "FINAL-U49",
+      "declared_expected_tables": [
+        "gnd_egbse.tblDepartment",
+        "gnd_egbse.tblHoliday",
+        "gnd_egbse.tblUnit",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblWorkTimeAllDays"
+      ],
+      "missing_physical_dependencies_found": [
+        "gnd_egbse.tblContact",
+        "gnd_egbse.tblConvertDateTypeL",
+        "gnd_egbse.tblPerson",
+        "gnd_egbse.tblPersonStatus",
+        "gnd_egbse.tblPosition",
+        "gnd_egbse.tblPrefix",
+        "gnd_egbse.tblUser",
+        "gnd_scpch.tblSupplier",
+        "gnu_egbse.xblContact",
+        "gnu_egbse.xblPerson",
+        "gnu_egbse.xblPrefix",
+        "gnu_scpch.xblPrePurchaseInvoice",
+        "gnu_scpch.xblSupplier"
+      ],
+      "added_since_human_finalization_baseline": [
+        "gnd_egbse.tblContact",
+        "gnd_egbse.tblConvertDateTypeL",
+        "gnd_egbse.tblPerson",
+        "gnd_egbse.tblPersonStatus",
+        "gnd_egbse.tblPosition",
+        "gnd_egbse.tblPrefix",
+        "gnd_egbse.tblUser",
+        "gnd_scpch.tblNotifyEnter",
+        "gnd_scpch.tblPrePurchaseInvoice",
+        "gnd_scpch.tblPrePurchaseInvoiceDetail",
+        "gnd_scpch.tblQualityControl",
+        "gnd_scpch.tblQualityControlDetail",
+        "gnd_scpch.tblSupplier",
+        "gnd_spgod.tblGood",
+        "gnu_egbse.xblContact",
+        "gnu_egbse.xblPerson",
+        "gnu_egbse.xblPrefix",
+        "gnu_scpch.xblPrePurchaseInvoice",
+        "gnu_scpch.xblSupplier"
+      ],
+      "removed_since_human_finalization_baseline": [
+        "gnd_egbse.tblDepartment",
+        "gnd_egbse.tblHoliday",
+        "gnd_egbse.tblUnit",
+        "gnd_hrcio.tblEmployeeShift",
+        "gnd_hrcio.tblShiftTemplate",
+        "gnd_hrcio.tblWorkTimeAllDays"
+      ],
+      "reference_sql_sha256": "753fe86a2a344448f93a901b9f45501601f96e67baf6f3b78a9d0c649b5d2ae0",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    },
+    {
+      "direct_tables": [
+        "gnd_crsls.tblCustomer",
+        "gnd_crsls.tblSalesAndServicesInvoice",
+        "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail",
+        "gnd_crsls.tblSalesAndServicesInvoiceServDetail",
+        "gnd_crsls.tblSellableService",
+        "gnd_egbse.tblContact",
+        "gnd_spgod.tblGood"
+      ],
+      "final_expected_tables": [
+        "gnd_crsls.tblCustomer",
+        "gnd_crsls.tblSalesAndServicesInvoice",
+        "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail",
+        "gnd_crsls.tblSalesAndServicesInvoiceServDetail",
+        "gnd_crsls.tblSellableService",
+        "gnd_egbse.tblContact",
+        "gnd_fiaci.tblVatPercentage",
+        "gnd_spgod.tblGood"
+      ],
+      "outside_corpus_dependencies": [],
+      "helper_objects": [
+        "gnd_crsls.fnCalVatSalesAndServicesInvoiceSalesDetail",
+        "gnd_crsls.fnCalVatSalesAndServicesInvoiceSalesDetailCall",
+        "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailDiscountValue",
+        "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailDiscountValueCall",
+        "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailRowTotalPayable",
+        "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailRowTotalPayableCall",
+        "gnd_crsls.fnSalesAndServicesInvoiceSalesDetail_servicesCalcSalesValue",
+        "gnd_crsls.fnSalesAndServicesInvoiceServDetailDiscountValue"
+      ],
+      "hidden_current_time_helpers": [],
+      "unresolved_dependency_metadata": [],
+      "provenance_edges": [
+        {
+          "from": "Gold FROM/JOIN",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail.Vat"
+        },
+        {
+          "from": "Gold FROM/JOIN",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail.DiscountValue"
+        },
+        {
+          "from": "Gold FROM/JOIN",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail.RowTotalPayable"
+        },
+        {
+          "from": "Gold FROM/JOIN",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceServDetail.DiscountValue"
+        },
+        {
+          "from": "Gold FROM/JOIN",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceServDetail.SalesValue"
+        },
+        {
+          "from": "gnd_crsls.fnCalVatSalesAndServicesInvoiceSalesDetailCall",
+          "to": "gnd_crsls.fnCalVatSalesAndServicesInvoiceSalesDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailDiscountValueCall",
+          "to": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailDiscountValue",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailRowTotalPayableCall",
+          "to": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailRowTotalPayable",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceServDetailDiscountValue",
+          "to": "gnd_crsls.tblSalesAndServicesInvoiceServDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetail_servicesCalcSalesValue",
+          "to": "gnd_crsls.tblSalesAndServicesInvoiceServDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnCalVatSalesAndServicesInvoiceSalesDetail",
+          "to": "gnd_crsls.tblSalesAndServicesInvoice",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnCalVatSalesAndServicesInvoiceSalesDetail",
+          "to": "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnCalVatSalesAndServicesInvoiceSalesDetail",
+          "to": "gnd_fiaci.tblVatPercentage",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailDiscountValue",
+          "to": "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailRowTotalPayable",
+          "to": "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail",
+          "referenced_column": null
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceServDetailDiscountValue",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceServDetail.DiscountValue"
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetail_servicesCalcSalesValue",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceServDetail.DiscountValue"
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetail_servicesCalcSalesValue",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceServDetail.SalesValue"
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailDiscountValue",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail.DiscountValue"
+        },
+        {
+          "from": "gnd_crsls.fnSalesAndServicesInvoiceSalesDetailRowTotalPayable",
+          "computed_column": "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail.DiscountValue"
+        }
+      ],
+      "id": "FINAL-U50",
+      "declared_expected_tables": [
+        "gnd_crsls.tblCustomer",
+        "gnd_crsls.tblSalesAndServicesInvoice",
+        "gnd_crsls.tblSalesAndServicesInvoiceSalesDetail",
+        "gnd_crsls.tblSalesAndServicesInvoiceServDetail",
+        "gnd_crsls.tblSellableService",
+        "gnd_egbse.tblContact",
+        "gnd_fiaci.tblVatPercentage",
+        "gnd_spgod.tblGood"
+      ],
+      "missing_physical_dependencies_found": [
+        "gnd_fiaci.tblVatPercentage"
+      ],
+      "added_since_human_finalization_baseline": [],
+      "removed_since_human_finalization_baseline": [],
+      "reference_sql_sha256": "a1636a4c65fe7b39eae7b982fcc4ca9503d55d47080b097549d438f2a5adfa52",
+      "scope": "Final human-approved Gold physical dependency closure",
+      "human_approved": true,
+      "expected_tables_status": "FINAL_APPROVED_CURRENT_SQL_DEPENDENCIES",
+      "overall_case_dependencies_finalized": true
+    }
+  ],
+  "finalized_case_count": 50,
+  "provisional_case_count": 0
+}
