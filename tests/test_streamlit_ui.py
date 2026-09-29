@@ -1,5 +1,6 @@
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from streamlit.testing.v1 import AppTest
 
@@ -41,6 +42,15 @@ class StreamlitUITests(unittest.TestCase):
             next(button for button in app.button if button.label == "Generate & Run").click().run()
             self.assertFalse(app.exception, scenario)
             self.assertEqual(app.session_state["response"].status, status)
+
+    def test_real_retrieval_mode_is_explicit_without_loading_models(self):
+        with patch.dict(
+            "os.environ",
+            {"ERP_APP_MODE": "real_retrieval_mock_generator"},
+        ):
+            app = self.app()
+        rendered = " ".join(item.value for item in app.markdown)
+        self.assertIn("REAL RETRIEVAL · MOCK GENERATOR / EXECUTION", rendered)
 
 
 if __name__ == "__main__":

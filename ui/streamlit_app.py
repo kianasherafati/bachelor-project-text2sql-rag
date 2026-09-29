@@ -1,5 +1,6 @@
 """Launch with: streamlit run ui/streamlit_app.py"""
 from pathlib import Path
+import os
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -11,15 +12,22 @@ import streamlit as st
 
 from app.adapters import EXAMPLES
 from app.contracts import STEPS
-from app.pipeline_service import create_service
+from app.pipeline_service import MODE_DEMO, create_service
 from ui.theme import CSS, notice, page_header, pipeline_html, schema_row
 
 st.set_page_config(page_title="ERP Intelligence — Text to SQL", page_icon="▦", layout="wide",
                    initial_sidebar_state="collapsed")
 st.markdown(CSS, unsafe_allow_html=True)
 
-MODE = "demo"  # Live mode cannot silently fall back until explicit adapters are wired.
-service = create_service(MODE)
+MODE = os.getenv("ERP_APP_MODE", MODE_DEMO).strip().lower()
+
+
+@st.cache_resource(show_spinner=False)
+def cached_service(mode):
+    return create_service(mode)
+
+
+service = cached_service(MODE)
 
 
 def clear_query():

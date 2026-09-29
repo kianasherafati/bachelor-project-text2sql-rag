@@ -3,7 +3,23 @@ import re
 from time import perf_counter
 
 from app.contracts import PipelineResponse
-from app.adapters import DemoExecutor, DemoGenerator, DemoSchemaProvider, project_validator
+from app.adapters import (
+    DemoExecutor,
+    DemoGenerator,
+    DemoSchemaProvider,
+    FrozenRetrievalSchemaProvider,
+    project_validator,
+)
+
+
+MODE_DEMO = "demo"
+MODE_REAL_RETRIEVAL = "real_retrieval_mock_generator"
+MODE_LIVE = "live"
+MODE_PROFILES = {
+    MODE_DEMO: (True, True, True),
+    MODE_REAL_RETRIEVAL: (False, True, True),
+    MODE_LIVE: (False, False, False),
+}
 
 
 def validation_reason(errors):
@@ -25,11 +41,11 @@ def validation_reason(errors):
 
 class PipelineService:
     def __init__(self, schema, generator, executor, validator=project_validator, *, mode="demo"):
-        if mode not in ("demo", "live"):
+        if mode not in MODE_PROFILES:
             raise ValueError("Unknown application mode")
-        if any(getattr(adapter, "is_demo", None) is not (mode == "demo")
-               for adapter in (schema, generator, executor)):
-            raise ValueError("Demo and live adapters cannot be mixed")
+        actual = tuple(getattr(adapter, "is_demo", None) for adapter in (schema, generator, executor))
+        if actual != MODE_PROFILES[mode]:
+            raise ValueError(f"Adapter profile does not match explicit mode: {mode}")
         self.schema, self.generator, self.executor = schema, generator, executor
         self.validator, self.mode = validator, mode
 
@@ -142,6 +158,10 @@ class PipelineService:
 
 
 def create_service(mode="demo"):
-    if mode != "demo":
-        raise ValueError("Live mode requires explicit schema and Qwen adapter wiring; no demo fallback is allowed.")
-    return PipelineService(DemoSchemaProvider(), DemoGenerator(), DemoExecutor())
+    if mode == MODE_DEMO:
+        return PipelineService(DemoSchemaProvider(), DemoGenerator(), DemoExecutor(), mode=mode)
+    if mode == MODE_REAL_RETRIEVAL:
+        return PipelineService(
+            FrozenRetrievalSchemaProvider(), DemoGenerator(), DemoExecutor(), mode=mode
+        )
+    raise ValueError("Live mode requires explicit Qwen and execution adapter wiring; no fallback is allowed.")

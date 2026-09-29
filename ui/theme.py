@@ -113,7 +113,12 @@ code { font-family:'JetBrains Mono',Consolas,monospace !important; }
 
 
 def page_header(mode: str) -> str:
-    mode_badge = "MOCK / DEVELOPMENT" if mode == "demo" else "LIVE ADAPTERS"
+    mode_badges = {
+        "demo": "MOCK / DEVELOPMENT",
+        "real_retrieval_mock_generator": "REAL RETRIEVAL · MOCK GENERATOR / EXECUTION",
+        "live": "LIVE ADAPTERS",
+    }
+    mode_badge = mode_badges.get(mode, mode.upper().replace("_", " "))
     return f"""<div class="erp-header"><div class="eyebrow">GALEX · Enterprise reporting</div>
     <h1>ERP Intelligence — Text to SQL</h1>
     <p>Natural-language reporting for enterprise data, with a visible safety pipeline.</p>

@@ -32,6 +32,18 @@ Generated SQL is view-only. Connecting live mode requires explicit compatible
 schema retrieval and Qwen generator adapters; the application will never fall
 back silently from live mode to demo data.
 
+To run the development mode with the existing frozen candidate retrieval and
+reranker, while keeping generation and execution mocked:
+
+```powershell
+$env:ERP_APP_MODE = "real_retrieval_mock_generator"
+.\.venv\Scripts\python.exe -m streamlit run ui/streamlit_app.py
+```
+
+This mode loads the frozen BGE-M3 Dense Top50, MiniLM Graph Top50, and BGE
+reranker resources lazily and caches the application service across Streamlit
+reruns. It does not enable Qwen or SQL Server execution.
+
 Run the offline application tests without collecting legacy scripts that may
 connect to SQL Server:
 
