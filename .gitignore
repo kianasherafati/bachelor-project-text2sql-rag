@@ -71,3 +71,7 @@ retrieval/bge_business_schema_build_report.json
 retrieval/bge_business_schema_metadata.json
 
 .dist/
+
+# Evaluation outputs are local immutable runtime artifacts, not source data.
+evaluation/dev_dry_runs/
+evaluation/final_runs/
