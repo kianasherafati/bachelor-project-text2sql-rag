@@ -69,3 +69,5 @@ evaluation/bge_business_dense_comparison_results.json
 evaluation/bge_business_dense_protected_hashes_before.json
 retrieval/bge_business_schema_build_report.json
 retrieval/bge_business_schema_metadata.json
+
+.dist/
